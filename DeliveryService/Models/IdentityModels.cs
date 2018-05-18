@@ -29,5 +29,6 @@ namespace DeliveryService.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Driver> Driver { get; set; } 
     }
 }

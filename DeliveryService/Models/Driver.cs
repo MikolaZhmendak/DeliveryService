@@ -18,13 +18,8 @@ namespace DeliveryService.Models
         [Display(Name = "Last Name")]
         public virtual string LastName { get; set; }
 
-        [DataType(DataType.EmailAddress)]
-        [EmailAddress(ErrorMessage = "Invalid Email Address")]
-        public string Email { get; set; }
-
         [DisplayFormat(DataFormatString = "{0: ###-####-####}")]
         public long PhoneNumber { get; set; }
-
 
         [DataType(DataType.PostalCode)]
         public virtual string ZipCode { get; set; }

@@ -58,11 +58,11 @@ namespace DeliveryService
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+       //     app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions());
+         //   {
+           //     ClientId = "240794020868-8k2heuhhetmo5ak8hgb2vo7eghsfpphp.apps.googleusercontent.com",
+             //   ClientSecret = "ocK3daBeQEBgLYwNraThyxY3";
+          //  });
         }
     }
 }
