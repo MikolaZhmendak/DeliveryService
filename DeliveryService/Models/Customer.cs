@@ -14,12 +14,6 @@ namespace DeliveryService.Models
         public int CustomerId { get; set; }
 
 
-        public int OrderId { get; set; }
-        [ForeignKey("OrderId")]
-        public virtual CustomerOrderHistory CustomerOrderHistory { get; set; }
-
-
-
         [Required(ErrorMessage = " First Name is required")]
         [StringLength(50)]
         [Display(Name = "First Name")]

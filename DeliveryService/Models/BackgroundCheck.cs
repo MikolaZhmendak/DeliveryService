@@ -16,7 +16,7 @@ namespace DeliveryService.Models
         public int BackgroundId { get; set; }
 
         public int DriverId { get; set; }
-        [ForeignKey("DriverID")]
+        [ForeignKey("DriverId")]
         public virtual Driver Driver { get; set; }
 
         [Required(ErrorMessage = "Date of Birth required")]

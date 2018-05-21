@@ -14,7 +14,7 @@ namespace DeliveryService.Models
 
 
         public int DriverId { get; set; }
-        [ForeignKey("DriverID")]
+        [ForeignKey("DriverId")]
         public virtual Driver Driver { get; set; }
 
         public string LicenceState { get; set; }
