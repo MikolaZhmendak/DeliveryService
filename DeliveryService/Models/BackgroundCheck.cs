@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -14,13 +15,19 @@ namespace DeliveryService.Models
 
         public int BackgroundId { get; set; }
 
-        [Required]
         public int DriverId { get; set; }
         [ForeignKey("DriverID")]
         public virtual Driver Driver { get; set; }
 
+        [Required(ErrorMessage = "Date of Birth required")]
+        [DisplayName("Date of Birth")]
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime? Date_of_Birth { get; set; }
 
-        public string VehicleType { get; set; }
+        [Required(ErrorMessage = "SSN is required")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:###-##-####}")]
+        public long Ssn { get; set; }
+
 
 
 

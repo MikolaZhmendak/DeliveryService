@@ -37,9 +37,9 @@ namespace DeliveryService
                 //Create user                  
                 var user = new ApplicationUser();
                 user.UserName = "admin";
-                user.Email = "admin@gmail.com";
+                user.Email = "zhmendakmikola@yahoo.com";
 
-                string userPWD = "password!";
+                string userPWD = "Soccer2020$";
 
                 var chkUser = UserManager.Create(user, userPWD);
 
@@ -51,7 +51,7 @@ namespace DeliveryService
                 }
             }
 
-            // Create Instructor  
+            // Create Customer
             if (!roleManager.RoleExists("Customer"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
@@ -60,7 +60,7 @@ namespace DeliveryService
 
             }
 
-            // creating Creating Employee role    
+            // creating Creating Driver role   
             if (!roleManager.RoleExists("Driver"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();

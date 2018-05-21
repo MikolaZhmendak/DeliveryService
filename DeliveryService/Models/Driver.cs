@@ -14,6 +14,7 @@ namespace DeliveryService.Models
         [StringLength(50)]
         [Display(Name = "First Name")]
         public virtual string FirstName { get; set; }
+
         [StringLength(50)]
         [Display(Name = "Last Name")]
         public virtual string LastName { get; set; }

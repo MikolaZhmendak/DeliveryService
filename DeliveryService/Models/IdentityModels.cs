@@ -29,6 +29,12 @@ namespace DeliveryService.Models
         {
             return new ApplicationDbContext();
         }
-        public DbSet<Driver> Driver { get; set; } 
+        public DbSet<BackgroundCheck> BackgroundCheck { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<CustomerOrderHistory> CustomerOrderHistory { get; set; }
+        public DbSet<Driver> Driver { get; set; }
+        public DbSet<Vehicle> Vehicle { get; set; }
+       
+        
     }
 }
