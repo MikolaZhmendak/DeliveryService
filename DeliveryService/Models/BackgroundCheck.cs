@@ -19,6 +19,7 @@ namespace DeliveryService.Models
         [ForeignKey("DriverId")]
         public virtual Driver Driver { get; set; }
 
+        [MinimumAge(18)]
         [Required(ErrorMessage = "Date of Birth required")]
         [DisplayName("Date of Birth")]
         [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]

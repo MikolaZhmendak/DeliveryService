@@ -67,7 +67,7 @@ namespace DeliveryService.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Background([Bind(Include = "BackgroundId")] BackgroundCheck backgroundCheck)
+        public ActionResult Background([Bind(Include = "BackgroundId, DriverId, Date_of_Birth, Ssn")] BackgroundCheck backgroundCheck)
         {
           if (ModelState.IsValid)
             {
