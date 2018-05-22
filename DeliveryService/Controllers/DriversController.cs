@@ -52,16 +52,18 @@ namespace DeliveryService.Controllers
             {
                 db.Driver.Add(driver);
                 db.SaveChanges();
-                return RedirectToAction("Background");
+                return RedirectToAction("Background", new { driverId = driver.DriverId });
             }
 
             return View(driver);
         }
 
 
-        public ActionResult Background()
+        public ActionResult Background(int? driverId)
         {
-            return View();
+            BackgroundCheck backgroundCheck = new BackgroundCheck();
+            backgroundCheck.DriverId = driverId;
+            return View(backgroundCheck);
         }
 
 
@@ -69,11 +71,11 @@ namespace DeliveryService.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Background([Bind(Include = "BackgroundId, DriverId, Date_of_Birth, Ssn")] BackgroundCheck backgroundCheck)
         {
-          if (ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-            db.BackgroundCheck.Add(backgroundCheck);
-            db.SaveChanges();
-            return RedirectToAction("Vehicle");
+                db.BackgroundCheck.Add(backgroundCheck);
+                db.SaveChanges();
+                return RedirectToAction("Vehicle");
             }
             return View(backgroundCheck);
         }

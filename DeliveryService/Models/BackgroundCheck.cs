@@ -15,7 +15,7 @@ namespace DeliveryService.Models
 
         public int BackgroundId { get; set; }
 
-        public int DriverId { get; set; }
+        public int? DriverId { get; set; }
         [ForeignKey("DriverId")]
         public virtual Driver Driver { get; set; }
 
