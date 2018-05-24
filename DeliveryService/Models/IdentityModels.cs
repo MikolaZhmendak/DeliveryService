@@ -34,7 +34,7 @@ namespace DeliveryService.Models
         public DbSet<CustomerOrderHistory> CustomerOrderHistory { get; set; }
         public DbSet<Driver> Driver { get; set; }
         public DbSet<Vehicle> Vehicle { get; set; }
-       
-        
+        //       public DbSet<Restaurant> Restaurant { get; set; }
+      //  AIzaSyDAVUCRfT4tOXt1ThRoWc4SSPBgVUXkUP4
     }
 }

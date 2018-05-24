@@ -14,6 +14,11 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        public ActionResult DriverHome()
+        {
+            return View();
+        }
+
         // GET: Drivers
         public ActionResult Index()
         {
@@ -81,10 +86,35 @@ namespace DeliveryService.Controllers
         }
 
 
-        public ActionResult Vehicle()
+        public ActionResult Vehicle(int? driverId)
         {
-            return View();
+            Vehicle vehicle = new Vehicle();
+            vehicle.DriverId = driverId;
+
+            return View(vehicle);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Vehicle([Bind(Include = "VehicleId, DriverId, DrivingLicence, LicenceState")] Vehicle vehicle)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Vehicle.Add(vehicle);
+                db.SaveChanges();
+                return RedirectToAction("Welcome");
+            }
+            return View(vehicle);
+        }
+
+        public ActionResult Welcome(string Driver)
+
+        {
+            Driver driver = new Driver();
+            var FirstName = driver.FirstName;
+            return View(Driver);
+        }
+
 
         // GET: Drivers/Edit/5
         public ActionResult Edit(int? id)

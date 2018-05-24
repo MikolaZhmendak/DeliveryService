@@ -14,6 +14,16 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        public ActionResult CustomersHome()
+        {
+            return View();
+        }
+   //     public ActionResult Reroute()
+     //   {
+       //     var x = 5;
+         //   return RedirectToAction("Index");
+       // }
+
         // GET: Customers
         public ActionResult Index()
         {
@@ -56,6 +66,13 @@ namespace DeliveryService.Controllers
             }
 
             return View(customer);
+        }
+
+        public ActionResult Home (string searching)
+        {
+
+            return View();
+           // return View(db.Restaurant.Where(x=> x.ZipCode.Contains(searching) || searching == null).ToList());
         }
 
         // GET: Customers/Edit/5

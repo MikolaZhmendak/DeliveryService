@@ -13,15 +13,17 @@ namespace DeliveryService.Models
         public int VehicleId { get; set; }
 
 
-        public int DriverId { get; set; }
+        public int? DriverId { get; set; }
         [ForeignKey("DriverId")]
         public virtual Driver Driver { get; set; }
 
+        [Required]
         public string LicenceState { get; set; }
 
         [Required]
-        [StringLength(255)]
-        public string DrivingLicense { get; set; }
+        [DisplayFormat(DataFormatString = "{0: ####-####-####-##}")]
+        public long DrivingLicence { get; set; }
+
 
 
 
