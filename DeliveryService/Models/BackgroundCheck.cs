@@ -25,11 +25,12 @@ namespace DeliveryService.Models
         [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? Date_of_Birth { get; set; }
 
-        [Required(ErrorMessage = "SSN is required")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:###-##-####}")]
-        public long Ssn { get; set; }
+        //    [Required(ErrorMessage = "SSN is required")]
+        //      [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:###-##-####}")]
+        //    public long Ssn { get; set; }
 
-
+        [Display(Name = "Social Security")]
+        public string Ssn { get; set; }
 
 
 

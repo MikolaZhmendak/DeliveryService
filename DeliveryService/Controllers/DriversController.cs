@@ -107,12 +107,11 @@ namespace DeliveryService.Controllers
             return View(vehicle);
         }
 
-        public ActionResult Welcome(string Driver)
+        public ActionResult Welcome()
 
         {
-            Driver driver = new Driver();
-            var FirstName = driver.FirstName;
-            return View(Driver);
+          
+            return View();
         }
 
 

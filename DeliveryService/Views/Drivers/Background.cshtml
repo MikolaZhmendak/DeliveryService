@@ -4,14 +4,14 @@
     
 }
 
-<h2>Step two. Background Check.</h2>
+<h2>Step 2. Background Check.</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Background Check</h4>
+ 
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

@@ -15,6 +15,7 @@ namespace DeliveryService.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
         private ApplicationDbContext context;
@@ -78,13 +79,31 @@ namespace DeliveryService.Controllers
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
-            returnUrl = "/Home/Index";
+
+
 
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
-               //     return RedirectToAction("Reroute", "Customers");
+                    if (User.IsInRole("Customer"))
+                    {
+                        returnUrl = "1";
+                    }
+                    else if (User.IsInRole("Driver"))
+                    {
+                        returnUrl = "2";
+                    }
+
+                    if (returnUrl == "1")
+                    {
+                        return RedirectToAction("DriverHome", "Drivers");
+                    }
+                    else
+                    {
+                        return RedirectToAction("CustomersHome", "Customers");
+                    }
+            
+               return RedirectToAction(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:

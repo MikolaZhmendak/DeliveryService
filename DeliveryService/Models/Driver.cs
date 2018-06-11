@@ -19,8 +19,9 @@ namespace DeliveryService.Models
         [Display(Name = "Last Name")]
         public virtual string LastName { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0: ###-####-####}")]
-        public long PhoneNumber { get; set; }
+
+        [Display(Name = "Phone#")]
+        public string PhoneNumber { get; set; }
 
         [DataType(DataType.PostalCode)]
         public virtual string ZipCode { get; set; }

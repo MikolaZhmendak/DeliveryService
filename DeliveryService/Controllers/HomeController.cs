@@ -26,5 +26,22 @@ namespace DeliveryService.Controllers
 
             return View();
         }
+
+            public ActionResult Home()
+        {
+            bool role = User.IsInRole("Customer");
+            if (role)
+            {
+                return RedirectToAction("CustomerHome", "Customers");
+
+            }
+            role = User.IsInRole("Driver");
+            if (role)
+            {
+                return RedirectToAction("DriverHome", "Drivers");
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
+        }
     }
-}

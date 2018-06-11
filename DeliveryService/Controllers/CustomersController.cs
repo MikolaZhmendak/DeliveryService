@@ -62,12 +62,15 @@ namespace DeliveryService.Controllers
             {
                 db.Customer.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("NewCustomer");
             }
 
             return View(customer);
         }
-
+        public ActionResult NewCustomer()
+        {
+            return View();
+        }
         public ActionResult Home (string searching)
         {
 
