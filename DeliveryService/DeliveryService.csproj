@@ -243,6 +243,10 @@
     <Compile Include="Migrations\201806111920087_Ssn.Designer.cs">
       <DependentUpon>201806111920087_Ssn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806121951355_update table.cs" />
+    <Compile Include="Migrations\201806121951355_update table.Designer.cs">
+      <DependentUpon>201806121951355_update table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
@@ -364,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806111920087_Ssn.resx">
       <DependentUpon>201806111920087_Ssn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806121951355_update table.resx">
+      <DependentUpon>201806121951355_update table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
