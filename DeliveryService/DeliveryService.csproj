@@ -260,6 +260,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap-myversion.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\83436499-vector-conceptual-food-delivery-logo-design-motorcycle-driver-carrying-plate-of-food %281%29.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
