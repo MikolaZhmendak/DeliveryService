@@ -219,33 +219,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201805211901070_deleted foreignkey on the customer table.cs" />
-    <Compile Include="Migrations\201805211901070_deleted foreignkey on the customer table.Designer.cs">
-      <DependentUpon>201805211901070_deleted foreignkey on the customer table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805221331281_make an driverId null.cs" />
-    <Compile Include="Migrations\201805221331281_make an driverId null.Designer.cs">
-      <DependentUpon>201805221331281_make an driverId null.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805221412056_make an driverId null in the vehicle table.cs" />
-    <Compile Include="Migrations\201805221412056_make an driverId null in the vehicle table.Designer.cs">
-      <DependentUpon>201805221412056_make an driverId null in the vehicle table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805221448197_changing the driver licence format.cs" />
-    <Compile Include="Migrations\201805221448197_changing the driver licence format.Designer.cs">
-      <DependentUpon>201805221448197_changing the driver licence format.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806111906080_phone numbe.cs" />
-    <Compile Include="Migrations\201806111906080_phone numbe.Designer.cs">
-      <DependentUpon>201806111906080_phone numbe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806111920087_Ssn.cs" />
-    <Compile Include="Migrations\201806111920087_Ssn.Designer.cs">
-      <DependentUpon>201806111920087_Ssn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806121951355_update table.cs" />
-    <Compile Include="Migrations\201806121951355_update table.Designer.cs">
-      <DependentUpon>201806121951355_update table.cs</DependentUpon>
+    <Compile Include="Migrations\201806202256342_inital.cs" />
+    <Compile Include="Migrations\201806202256342_inital.Designer.cs">
+      <DependentUpon>201806202256342_inital.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -351,30 +327,12 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201805211901070_deleted foreignkey on the customer table.resx">
-      <DependentUpon>201805211901070_deleted foreignkey on the customer table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805221331281_make an driverId null.resx">
-      <DependentUpon>201805221331281_make an driverId null.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805221412056_make an driverId null in the vehicle table.resx">
-      <DependentUpon>201805221412056_make an driverId null in the vehicle table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805221448197_changing the driver licence format.resx">
-      <DependentUpon>201805221448197_changing the driver licence format.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806111906080_phone numbe.resx">
-      <DependentUpon>201806111906080_phone numbe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806111920087_Ssn.resx">
-      <DependentUpon>201806111920087_Ssn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806121951355_update table.resx">
-      <DependentUpon>201806121951355_update table.cs</DependentUpon>
-    </EmbeddedResource>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <EmbeddedResource Include="Migrations\201806202256342_inital.resx">
+      <DependentUpon>201806202256342_inital.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

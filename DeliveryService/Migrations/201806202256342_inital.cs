@@ -3,7 +3,7 @@ namespace DeliveryService.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class deletedforeignkeyonthecustomertable : DbMigration
+    public partial class inital : DbMigration
     {
         public override void Up()
         {
@@ -12,12 +12,12 @@ namespace DeliveryService.Migrations
                 c => new
                     {
                         BackgroundId = c.Int(nullable: false, identity: true),
-                        DriverId = c.Int(nullable: false),
+                        DriverId = c.Int(),
                         Date_of_Birth = c.DateTime(nullable: false),
-                        Ssn = c.Long(nullable: false),
+                        Ssn = c.String(),
                     })
                 .PrimaryKey(t => t.BackgroundId)
-                .ForeignKey("dbo.Drivers", t => t.DriverId, cascadeDelete: true)
+                .ForeignKey("dbo.Drivers", t => t.DriverId)
                 .Index(t => t.DriverId);
             
             CreateTable(
@@ -27,7 +27,7 @@ namespace DeliveryService.Migrations
                         DriverId = c.Int(nullable: false, identity: true),
                         FirstName = c.String(maxLength: 50),
                         LastName = c.String(maxLength: 50),
-                        PhoneNumber = c.Long(nullable: false),
+                        PhoneNumber = c.String(),
                         ZipCode = c.String(),
                     })
                 .PrimaryKey(t => t.DriverId);
@@ -131,12 +131,12 @@ namespace DeliveryService.Migrations
                 c => new
                     {
                         VehicleId = c.Int(nullable: false, identity: true),
-                        DriverId = c.Int(nullable: false),
-                        LicenceState = c.String(),
-                        DrivingLicense = c.String(nullable: false, maxLength: 255),
+                        DriverId = c.Int(),
+                        LicenceState = c.String(nullable: false),
+                        DrivingLicence = c.Long(nullable: false),
                     })
                 .PrimaryKey(t => t.VehicleId)
-                .ForeignKey("dbo.Drivers", t => t.DriverId, cascadeDelete: true)
+                .ForeignKey("dbo.Drivers", t => t.DriverId)
                 .Index(t => t.DriverId);
             
         }
