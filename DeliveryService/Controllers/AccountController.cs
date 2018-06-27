@@ -100,7 +100,7 @@ namespace DeliveryService.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("CustomersHome", "Customers");
+                        return RedirectToAction("CustomerHome", "Customers");
                     }
             
                return RedirectToAction(returnUrl);

@@ -7,13 +7,13 @@ namespace DeliveryService.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ordertableupdrade : IMigrationMetadata
+    public sealed partial class tipsforcustomerordertable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ordertableupdrade));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(tipsforcustomerordertable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201806271530377_order table updrade"; }
+            get { return "201806272227122_tips for customerorder table"; }
         }
         
         string IMigrationMetadata.Source

@@ -220,13 +220,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806271525597_order table.cs" />
-    <Compile Include="Migrations\201806271525597_order table.Designer.cs">
-      <DependentUpon>201806271525597_order table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806271530377_order table updrade.cs" />
-    <Compile Include="Migrations\201806271530377_order table updrade.Designer.cs">
-      <DependentUpon>201806271530377_order table updrade.cs</DependentUpon>
+    <Compile Include="Migrations\201806272227122_tips for customerorder table.cs" />
+    <Compile Include="Migrations\201806272227122_tips for customerorder table.Designer.cs">
+      <DependentUpon>201806272227122_tips for customerorder table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -310,22 +306,22 @@
     <Content Include="Views\Drivers\Details.cshtml" />
     <Content Include="Views\Drivers\Edit.cshtml" />
     <Content Include="Views\Drivers\Index.cshtml" />
+    <Content Include="Views\Drivers\Background.cshtml" />
+    <Content Include="Views\Drivers\Vehicle.cshtml" />
+    <Content Include="Views\Drivers\Welcome.cshtml" />
+    <Content Include="Views\Drivers\DriverHome.cshtml" />
     <Content Include="Views\Customers\Create.cshtml" />
     <Content Include="Views\Customers\Delete.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
-    <Content Include="Views\Drivers\Background.cshtml" />
-    <Content Include="Views\Drivers\Vehicle.cshtml" />
-    <Content Include="Views\Drivers\Welcome.cshtml" />
-    <Content Include="Views\Drivers\DriverHome.cshtml" />
-    <Content Include="Views\Customers\CustomersHome.cshtml" />
-    <Content Include="Views\Customers\NewCustomer.cshtml" />
     <Content Include="Views\CustomerOrders\Create.cshtml" />
     <Content Include="Views\CustomerOrders\Delete.cshtml" />
     <Content Include="Views\CustomerOrders\Details.cshtml" />
     <Content Include="Views\CustomerOrders\Edit.cshtml" />
     <Content Include="Views\CustomerOrders\Index.cshtml" />
+    <Content Include="Views\Customers\NewCustomer.cshtml" />
+    <Content Include="Views\Customers\CustomerHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -341,11 +337,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806271525597_order table.resx">
-      <DependentUpon>201806271525597_order table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806271530377_order table updrade.resx">
-      <DependentUpon>201806271530377_order table updrade.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806272227122_tips for customerorder table.resx">
+      <DependentUpon>201806272227122_tips for customerorder table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

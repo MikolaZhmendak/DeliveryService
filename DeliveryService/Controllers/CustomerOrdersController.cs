@@ -46,7 +46,7 @@ namespace DeliveryService.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OrderId,RestaurantName,ItemOrdered,Quantity,Date_of_Order")] CustomerOrder customerOrder)
+        public ActionResult Create([Bind(Include = "OrderId,RestaurantName,ItemOrdered,Quantity,Date_of_Order,CurbeSide,WalkIn,Tips")] CustomerOrder customerOrder)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace DeliveryService.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OrderId,RestaurantName,ItemOrdered,Quantity,Date_of_Order")] CustomerOrder customerOrder)
+        public ActionResult Edit([Bind(Include = "OrderId,RestaurantName,ItemOrdered,Quantity,Date_of_Order,CurbeSide,WalkIn,Tips")] CustomerOrder customerOrder)
         {
             if (ModelState.IsValid)
             {
