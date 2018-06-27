@@ -3,7 +3,7 @@ namespace DeliveryService.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class inital : DbMigration
+    public partial class ordertable : DbMigration
     {
         public override void Up()
         {
@@ -48,15 +48,14 @@ namespace DeliveryService.Migrations
                 .PrimaryKey(t => t.CustomerId);
             
             CreateTable(
-                "dbo.CustomerOrderHistories",
+                "dbo.Restaurants",
                 c => new
                     {
-                        OrderId = c.Int(nullable: false, identity: true),
-                        RestaurantName = c.String(),
-                        ItemOrdered = c.String(),
-                        Quantity = c.Int(nullable: false),
+                        RestaurantId = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        ZipCode = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.OrderId);
+                .PrimaryKey(t => t.RestaurantId);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -163,7 +162,7 @@ namespace DeliveryService.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
-            DropTable("dbo.CustomerOrderHistories");
+            DropTable("dbo.Restaurants");
             DropTable("dbo.Customers");
             DropTable("dbo.Drivers");
             DropTable("dbo.BackgroundChecks");

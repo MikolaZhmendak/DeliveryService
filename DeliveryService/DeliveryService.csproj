@@ -211,6 +211,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerOrdersController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\DriversController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -219,19 +220,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806202256342_inital.cs" />
-    <Compile Include="Migrations\201806202256342_inital.Designer.cs">
-      <DependentUpon>201806202256342_inital.cs</DependentUpon>
+    <Compile Include="Migrations\201806271525597_order table.cs" />
+    <Compile Include="Migrations\201806271525597_order table.Designer.cs">
+      <DependentUpon>201806271525597_order table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806271530377_order table updrade.cs" />
+    <Compile Include="Migrations\201806271530377_order table updrade.Designer.cs">
+      <DependentUpon>201806271530377_order table updrade.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\CustomerOrderHistory.cs" />
+    <Compile Include="Models\CustomerOrder.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MinimumAgeAttribute.cs" />
+    <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -315,6 +321,11 @@
     <Content Include="Views\Drivers\DriverHome.cshtml" />
     <Content Include="Views\Customers\CustomersHome.cshtml" />
     <Content Include="Views\Customers\NewCustomer.cshtml" />
+    <Content Include="Views\CustomerOrders\Create.cshtml" />
+    <Content Include="Views\CustomerOrders\Delete.cshtml" />
+    <Content Include="Views\CustomerOrders\Details.cshtml" />
+    <Content Include="Views\CustomerOrders\Edit.cshtml" />
+    <Content Include="Views\CustomerOrders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -330,8 +341,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806202256342_inital.resx">
-      <DependentUpon>201806202256342_inital.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806271525597_order table.resx">
+      <DependentUpon>201806271525597_order table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806271530377_order table updrade.resx">
+      <DependentUpon>201806271530377_order table updrade.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
