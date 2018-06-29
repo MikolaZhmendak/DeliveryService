@@ -14,11 +14,19 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+
+       
         // GET: CustomerOrders
         public ActionResult Index()
         {
             return View(db.CustomerOrder.ToList());
         }
+
+        public ActionResult Payment()
+        {
+            return View();
+        }
+
 
         // GET: CustomerOrders/Details/5
         public ActionResult Details(int? id)
