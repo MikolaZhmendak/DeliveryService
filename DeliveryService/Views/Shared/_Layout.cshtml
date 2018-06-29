@@ -20,14 +20,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    @Html.ActionLink("Delivery to you doorstep", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+  @**             @Html.ActionLink("Delivery to you doorstep", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" }) *@
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })   </li>
+    @**                  <li>@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })   </li>
                         <li>@Html.ActionLink("About", "About", "Home",routeValues: null, htmlAttributes: new { id = "about", @class = "nav-link" })    </li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home", routeValues: null, htmlAttributes: new { id = "contact", @class = "nav-link" })   </li>
-
+        *@
                     </ul>
                     @Html.Partial("_LoginPartial")
                 </div>

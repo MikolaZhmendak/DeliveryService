@@ -13,7 +13,7 @@
     <li>@Html.ActionLink("Search", "Home", "Customers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
     <li>@Html.ActionLink("CustomerOrders", "Create", "CustomerOrders", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
     <li>@Html.ActionLink("Payment", "Create", "Payments", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
-    <li>@Html.ActionLink("History", "Create", "History", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
+    <li>@Html.ActionLink("History", "Index", "History", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
 
 }
 
@@ -27,6 +27,10 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
+      
+        <li>@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })   </li>
+        <li>@Html.ActionLink("About", "About", "Home", routeValues: null, htmlAttributes: new { id = "about", @class = "nav-link" })    </li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home", routeValues: null, htmlAttributes: new { id = "contact", @class = "nav-link" })   </li>
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>

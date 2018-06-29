@@ -14,6 +14,14 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        public ActionResult RestaurantSearch()
+        { 
+
+            return View();
+
+        }
+      
+
 
         public ActionResult CustomerHome()
         {
