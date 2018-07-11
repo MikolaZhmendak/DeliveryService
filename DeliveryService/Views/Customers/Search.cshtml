@@ -14,6 +14,7 @@
         <tr>
             <th>Name</th>
             <th>ZipCode</th>
+            <th>Menu</th>
 
         
         </tr>
@@ -24,6 +25,8 @@
             <tr>
                 <td>@Item.Name</td>
                 <td>@Item.ZipCode</td>
+        
+                <td><a href="@Item.Url">View</a></td>
 
             </tr>
 
@@ -54,6 +57,7 @@
                             var Data = "<tr>" +
                                 "<td>" + value.Name + "</td>" +
                                 "<td>" + value.ZipCode + "</td>" +
+                                "<td>" + "<a href>"+  value.Url + "</a>"+ "</td>" +
                                 "</tr>";
                             SetData.append(Data);
                         });

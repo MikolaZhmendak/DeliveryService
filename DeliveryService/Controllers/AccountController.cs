@@ -85,25 +85,8 @@ namespace DeliveryService.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    if (User.IsInRole("Customer"))
-                    {
-                        returnUrl = "1";
-                    }
-                    else if (User.IsInRole("Driver"))
-                    {
-                        returnUrl = "2";
-                    }
-
-                    if (returnUrl == "1")
-                    {
-                        return RedirectToAction("DriverHome", "Drivers");
-                    }
-                    else
-                    {
-                        return RedirectToAction("CustomerHome", "Customers");
-                    }
-            
-               return RedirectToAction(returnUrl);
+                    //      return RedirectToAction(returnUrl);
+                    return RedirectToAction("Home", "Home");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:

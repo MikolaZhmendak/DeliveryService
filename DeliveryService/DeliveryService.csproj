@@ -223,6 +223,7 @@
     <Compile Include="Controllers\DriversController.cs" />
     <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InsuranceInfromationsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\usersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -248,6 +249,14 @@
     <Compile Include="Migrations\201807112032073_added range to credit card table.Designer.cs">
       <DependentUpon>201807112032073_added range to credit card table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807112139101_url for restaurants.cs" />
+    <Compile Include="Migrations\201807112139101_url for restaurants.Designer.cs">
+      <DependentUpon>201807112139101_url for restaurants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807112334087_insurance table.cs" />
+    <Compile Include="Migrations\201807112334087_insurance table.Designer.cs">
+      <DependentUpon>201807112334087_insurance table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
@@ -256,6 +265,7 @@
     <Compile Include="Models\CustomerOrder.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\InsuranceInfromation.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MinimumAgeAttribute.cs" />
     <Compile Include="Models\Restaurant.cs" />
@@ -357,6 +367,11 @@
     <Content Include="Views\CustomerOrders\Stripe.cshtml" />
     <Content Include="Views\CreditCards\Create.cshtml" />
     <Content Include="Views\CreditCards\PaymentMade.cshtml" />
+    <Content Include="Views\InsuranceInfromations\Create.cshtml" />
+    <Content Include="Views\InsuranceInfromations\Delete.cshtml" />
+    <Content Include="Views\InsuranceInfromations\Details.cshtml" />
+    <Content Include="Views\InsuranceInfromations\Edit.cshtml" />
+    <Content Include="Views\InsuranceInfromations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -386,6 +401,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807112032073_added range to credit card table.resx">
       <DependentUpon>201807112032073_added range to credit card table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807112139101_url for restaurants.resx">
+      <DependentUpon>201807112139101_url for restaurants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807112334087_insurance table.resx">
+      <DependentUpon>201807112334087_insurance table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

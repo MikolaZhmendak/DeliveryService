@@ -15,5 +15,7 @@ namespace DeliveryService.Models
         public string Name { get; set; }
 
         public int ZipCode { get; set; }
+
+        public string Url { get; set; }
     }
 }

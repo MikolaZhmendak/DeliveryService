@@ -26,7 +26,7 @@ namespace DeliveryService.Controllers
             {
                 db.CreditCard.Add(creditCard);
                 db.SaveChanges();
-                return RedirectToAction("PaymentMade");
+                return RedirectToAction("Charge");
             }
 
             return View(creditCard);
