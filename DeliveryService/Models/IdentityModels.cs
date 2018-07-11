@@ -35,6 +35,7 @@ namespace DeliveryService.Models
         public DbSet<Driver> Driver { get; set; }
         public DbSet<Vehicle> Vehicle { get; set; }
         public DbSet<Restaurant> Restaurant { get; set; }
+        public DbSet<CreditCard> CreditCard { get; set; }
       //  AIzaSyDAVUCRfT4tOXt1ThRoWc4SSPBgVUXkUP4
     }
 }

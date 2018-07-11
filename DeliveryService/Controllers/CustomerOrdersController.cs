@@ -18,16 +18,17 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        public ActionResult PaymentMade()
+        public ActionResult Stripe()
         {
             var PublishableKey = ConfigurationManager.AppSettings["pk_test_c1nYrefZZ9bdIDYx1qebUDkW"];
             ViewBag.PublishableKey = "pk_test_c1nYrefZZ9bdIDYx1qebUDkW";
+
             return View();
         }
 
         public ActionResult Charge(string stripeEmail, string stripeToken)
         {
-            StripeConfiguration.SetApiKey("sk_test_qr62mLZFuJTOcHMbasoeZlgx");
+            StripeConfiguration.SetApiKey("sk_test_qr62mLZFuJTOcHMbasoeZlgX");
 
             var customers = new StripeCustomerService();
             var charges = new StripeChargeService();
@@ -40,7 +41,7 @@ namespace DeliveryService.Controllers
 
             var charge = charges.Create(new StripeChargeCreateOptions
             {
-                Amount = 8,
+                Amount = 800,
                 Description = "Item Charge",
                 Currency = "usd",
             CustomerId = customer.Id
@@ -49,7 +50,10 @@ namespace DeliveryService.Controllers
 
         return View();
     }
-
+        public ActionResult Payment()
+        {
+            return View();
+        }
 
         // GET: CustomerOrders
         public ActionResult Index()
