@@ -195,7 +195,7 @@ namespace DeliveryService.Controllers
                     }
                     else if (model.UserRoles.ToLower() == "driver")
                     {
-                        return RedirectToAction("Create", "Drivers");
+                        return RedirectToAction("Welcome", "Drivers");
                     }
                     else
                     {

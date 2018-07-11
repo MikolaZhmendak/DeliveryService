@@ -1,0 +1,21 @@
+﻿@model IEnumerable<DeliveryService.Models.CustomerOrder>
+
+@{ 
+    ViewBag.Title = "PaymentMade";
+}
+
+<h2> Make Deposit</h2>
+
+<form action="/CustomerOrders/Charge" method="post">
+    <article>
+        <label>Amount: $8.00</label>
+    </article>
+    <script src="//checkout.stripe.com/v2/checkout.js"
+            class="stripe-button"
+            data-keyboard="@ViewBag.PublishableKey"
+            data-locale="auto"
+            data-description="Item Charge"
+            data-amount="8">
+
+    </script>
+</form>

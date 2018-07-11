@@ -7,6 +7,10 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DeliveryService.Models;
+using System.Configuration;
+using Microsoft.AspNet.Identity;
+using Stripe;
+
 
 namespace DeliveryService.Controllers
 {
@@ -14,19 +18,46 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        public ActionResult PaymentMade()
+        {
+            var PublishableKey = ConfigurationManager.AppSettings["pk_test_c1nYrefZZ9bdIDYx1qebUDkW"];
+            ViewBag.PublishableKey = "pk_test_c1nYrefZZ9bdIDYx1qebUDkW";
+            return View();
+        }
 
-       
+        public ActionResult Charge(string stripeEmail, string stripeToken)
+        {
+            StripeConfiguration.SetApiKey("sk_test_qr62mLZFuJTOcHMbasoeZlgx");
+
+            var customers = new StripeCustomerService();
+            var charges = new StripeChargeService();
+
+            var customer = customers.Create(new StripeCustomerCreateOptions
+            {
+                Email = stripeEmail,
+                SourceToken = stripeToken
+            });
+
+            var charge = charges.Create(new StripeChargeCreateOptions
+            {
+                Amount = 8,
+                Description = "Item Charge",
+                Currency = "usd",
+            CustomerId = customer.Id
+
+            });
+
+        return View();
+    }
+
+
         // GET: CustomerOrders
         public ActionResult Index()
         {
             return View(db.CustomerOrder.ToList());
         }
 
-        public ActionResult Payment()
-        {
-            return View();
-        }
-
+       
 
         // GET: CustomerOrders/Details/5
         public ActionResult Details(int? id)

@@ -14,14 +14,38 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        public ActionResult RestaurantSearch()
-        { 
+       
 
-            return View();
-
+        public ActionResult Search()
+        {
+            return View(db.Restaurant.ToList());
         }
-      
 
+        public JsonResult GetSearchingData(string SearchBy, string SearchValue)
+        {
+            List<Restaurant> RestaurantList = new List<Restaurant>();
+            if (SearchBy == "ZipCode")
+            {
+                try
+                {
+                    int Zip = Convert.ToInt32(SearchValue);
+                    RestaurantList = db.Restaurant.Where(x => x.ZipCode == Zip || SearchValue == null).ToList();
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("{0} Is Not A Valid ZipCode", SearchValue);
+
+                }
+                return Json(RestaurantList, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                RestaurantList = db.Restaurant.Where(x => x.Name.Contains(SearchValue) || SearchValue == null).ToList();
+                return Json(RestaurantList, JsonRequestBehavior.AllowGet);
+            }
+         }
+
+        
 
         public ActionResult CustomerHome()
         {

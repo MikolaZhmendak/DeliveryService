@@ -10,13 +10,19 @@
 @if (User.IsInRole("Customer"))
 {
     <li> @Html.ActionLink("Home", "CustomerHome", "Customers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
-    <li>@Html.ActionLink("Search", "Home", "Customers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
+    <li>@Html.ActionLink("Search", "Search", "Customers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
     <li>@Html.ActionLink("CustomerOrders", "Create", "CustomerOrders", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
  //   <li>@Html.ActionLink("Payment", "Index", "Payments", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
     <li>@Html.ActionLink("History", "Index", "History", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
 
 }
 
+            @if (User.IsInRole("Driver"))
+            {
+                <li> @Html.ActionLink("Background", "Create", "Drivers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
+                <li> @Html.ActionLink("Customers", "Customer", "Drivers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
+
+            }
             <li>
                 @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
             </li>
