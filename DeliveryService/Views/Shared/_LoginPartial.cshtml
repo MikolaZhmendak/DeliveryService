@@ -23,6 +23,12 @@
                 <li> @Html.ActionLink("Customers", "Customer", "Drivers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
 
             }
+
+            @if (User.IsInRole("Employer"))
+            {
+                <li> @Html.ActionLink("Drivers", "View", "Employers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
+               
+            }
             <li>
                 @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
             </li>

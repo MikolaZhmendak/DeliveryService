@@ -40,8 +40,16 @@ namespace DeliveryService.Controllers
             {
                 return RedirectToAction("DriverHome", "Drivers");
             }
+            role = User.IsInRole("Employer");
+            if (role)
+            {
+                return RedirectToAction("Home", "Employers");
+            }
+
             return RedirectToAction("Index", "Home");
-        }
+
+            }
+
 
         }
     }

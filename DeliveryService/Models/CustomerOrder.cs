@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -11,6 +12,12 @@ namespace DeliveryService.Models
     {
         [Key]
         public int OrderId { get; set; }
+
+        public int? CustomerId { get; set; }
+        [ForeignKey("CustomerId")]
+        public virtual Customer Customer { get; set; }
+
+
         public string RestaurantName { get; set; }
         public string ItemOrdered { get; set; }
         public int Quantity { get; set; }

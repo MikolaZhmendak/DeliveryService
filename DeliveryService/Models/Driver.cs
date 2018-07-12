@@ -20,8 +20,8 @@ namespace DeliveryService.Models
         public virtual string LastName { get; set; }
 
 
-        [Display(Name = "Phone#")]
-        public string PhoneNumber { get; set; }
+        [DisplayFormat(DataFormatString = "{0: ###-####-####}")]
+        public long PhoneNumber { get; set; }
 
         [DataType(DataType.PostalCode)]
         public virtual string ZipCode { get; set; }

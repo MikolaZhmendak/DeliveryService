@@ -180,6 +180,10 @@ namespace DeliveryService.Controllers
                     {
                         return RedirectToAction("Welcome", "Drivers");
                     }
+                    else if (model.UserRoles.ToLower() == "employer")
+                    {
+                        return RedirectToAction("Create", "Employers");
+                    }
                     else
                     {
                         return RedirectToAction("Index", "Home");

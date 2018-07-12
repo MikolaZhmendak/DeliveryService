@@ -221,6 +221,7 @@
     <Compile Include="Controllers\CustomerOrdersController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\DriversController.cs" />
+    <Compile Include="Controllers\EmployersController.cs" />
     <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InsuranceInfromationsController.cs" />
@@ -257,6 +258,22 @@
     <Compile Include="Migrations\201807112334087_insurance table.Designer.cs">
       <DependentUpon>201807112334087_insurance table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807121601243_included customer foreighn key into the Order table.cs" />
+    <Compile Include="Migrations\201807121601243_included customer foreighn key into the Order table.Designer.cs">
+      <DependentUpon>201807121601243_included customer foreighn key into the Order table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807121736333_Employer.cs" />
+    <Compile Include="Migrations\201807121736333_Employer.Designer.cs">
+      <DependentUpon>201807121736333_Employer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807121747212_Employer phone number.cs" />
+    <Compile Include="Migrations\201807121747212_Employer phone number.Designer.cs">
+      <DependentUpon>201807121747212_Employer phone number.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807121754233_Employer phone number information.cs" />
+    <Compile Include="Migrations\201807121754233_Employer phone number information.Designer.cs">
+      <DependentUpon>201807121754233_Employer phone number information.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
@@ -264,6 +281,7 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerOrder.cs" />
     <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\Employer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\InsuranceInfromation.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -372,6 +390,15 @@
     <Content Include="Views\InsuranceInfromations\Details.cshtml" />
     <Content Include="Views\InsuranceInfromations\Edit.cshtml" />
     <Content Include="Views\InsuranceInfromations\Index.cshtml" />
+    <Content Include="Views\Drivers\InsuranceInformation.cshtml" />
+    <Content Include="Views\Employers\Create.cshtml" />
+    <Content Include="Views\Employers\Delete.cshtml" />
+    <Content Include="Views\Employers\Details.cshtml" />
+    <Content Include="Views\Employers\Edit.cshtml" />
+    <Content Include="Views\Employers\Index.cshtml" />
+    <Content Include="Views\Employers\EmployerHome.cshtml" />
+    <Content Include="Views\Employers\Home.cshtml" />
+    <Content Include="Views\Employers\DriversView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -407,6 +434,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807112334087_insurance table.resx">
       <DependentUpon>201807112334087_insurance table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807121601243_included customer foreighn key into the Order table.resx">
+      <DependentUpon>201807121601243_included customer foreighn key into the Order table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807121736333_Employer.resx">
+      <DependentUpon>201807121736333_Employer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807121747212_Employer phone number.resx">
+      <DependentUpon>201807121747212_Employer phone number.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807121754233_Employer phone number information.resx">
+      <DependentUpon>201807121754233_Employer phone number information.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
