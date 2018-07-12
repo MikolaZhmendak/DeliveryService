@@ -27,10 +27,22 @@ namespace DeliveryService.Migrations
                         DriverId = c.Int(nullable: false, identity: true),
                         FirstName = c.String(maxLength: 50),
                         LastName = c.String(maxLength: 50),
-                        PhoneNumber = c.String(),
+                        PhoneNumber = c.Long(nullable: false),
                         ZipCode = c.String(),
                     })
                 .PrimaryKey(t => t.DriverId);
+            
+            CreateTable(
+                "dbo.CreditCards",
+                c => new
+                    {
+                        CreditCardId = c.Int(nullable: false, identity: true),
+                        CreditCardNumber = c.Int(nullable: false),
+                        CardType = c.Int(nullable: false),
+                        ExparationDate = c.Int(nullable: false),
+                        CVC = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.CreditCardId);
             
             CreateTable(
                 "dbo.Customers",
@@ -52,6 +64,7 @@ namespace DeliveryService.Migrations
                 c => new
                     {
                         OrderId = c.Int(nullable: false, identity: true),
+                        CustomerId = c.Int(),
                         RestaurantName = c.String(),
                         ItemOrdered = c.String(),
                         Quantity = c.Int(nullable: false),
@@ -60,7 +73,32 @@ namespace DeliveryService.Migrations
                         WalkIn = c.Boolean(nullable: false),
                         Tips = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.OrderId);
+                .PrimaryKey(t => t.OrderId)
+                .ForeignKey("dbo.Customers", t => t.CustomerId)
+                .Index(t => t.CustomerId);
+            
+            CreateTable(
+                "dbo.Employers",
+                c => new
+                    {
+                        FirstName = c.String(nullable: false, maxLength: 128),
+                        LastName = c.String(),
+                        PhoneNumber = c.Long(nullable: false),
+                    })
+                .PrimaryKey(t => t.FirstName);
+            
+            CreateTable(
+                "dbo.InsuranceInfromations",
+                c => new
+                    {
+                        InsuranceInformationId = c.Int(nullable: false, identity: true),
+                        DriverId = c.Int(),
+                        InsuranceProvider = c.String(),
+                        Expiration_Date = c.DateTime(),
+                    })
+                .PrimaryKey(t => t.InsuranceInformationId)
+                .ForeignKey("dbo.Drivers", t => t.DriverId)
+                .Index(t => t.DriverId);
             
             CreateTable(
                 "dbo.Restaurants",
@@ -69,6 +107,7 @@ namespace DeliveryService.Migrations
                         RestaurantId = c.Int(nullable: false, identity: true),
                         Name = c.String(),
                         ZipCode = c.Int(nullable: false),
+                        Url = c.String(),
                     })
                 .PrimaryKey(t => t.RestaurantId);
             
@@ -146,6 +185,8 @@ namespace DeliveryService.Migrations
                     {
                         VehicleId = c.Int(nullable: false, identity: true),
                         DriverId = c.Int(),
+                        VehicleType = c.String(),
+                        VehicleYear = c.Int(nullable: false),
                         LicenceState = c.String(nullable: false),
                         DrivingLicence = c.Long(nullable: false),
                     })
@@ -162,6 +203,8 @@ namespace DeliveryService.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
+            DropForeignKey("dbo.InsuranceInfromations", "DriverId", "dbo.Drivers");
+            DropForeignKey("dbo.CustomerOrders", "CustomerId", "dbo.Customers");
             DropForeignKey("dbo.BackgroundChecks", "DriverId", "dbo.Drivers");
             DropIndex("dbo.Vehicles", new[] { "DriverId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
@@ -170,6 +213,8 @@ namespace DeliveryService.Migrations
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            DropIndex("dbo.InsuranceInfromations", new[] { "DriverId" });
+            DropIndex("dbo.CustomerOrders", new[] { "CustomerId" });
             DropIndex("dbo.BackgroundChecks", new[] { "DriverId" });
             DropTable("dbo.Vehicles");
             DropTable("dbo.AspNetUserLogins");
@@ -178,8 +223,11 @@ namespace DeliveryService.Migrations
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Restaurants");
+            DropTable("dbo.InsuranceInfromations");
+            DropTable("dbo.Employers");
             DropTable("dbo.CustomerOrders");
             DropTable("dbo.Customers");
+            DropTable("dbo.CreditCards");
             DropTable("dbo.Drivers");
             DropTable("dbo.BackgroundChecks");
         }

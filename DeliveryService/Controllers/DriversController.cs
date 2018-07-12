@@ -96,7 +96,7 @@ namespace DeliveryService.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Vehicle([Bind(Include = "VehicleId, DriverId, DrivingLicence, LicenceState")] Vehicle vehicle)
+        public ActionResult Vehicle([Bind(Include = "VehicleId, DriverId, VehicleType, VehicleYear, DrivingLicence, LicenceState")] Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {

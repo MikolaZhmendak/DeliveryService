@@ -7,13 +7,13 @@ namespace DeliveryService.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Employerphonenumber : IMigrationMetadata
+    public sealed partial class initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Employerphonenumber));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201807121747212_Employer phone number"; }
+            get { return "201807122316137_initial"; }
         }
         
         string IMigrationMetadata.Source

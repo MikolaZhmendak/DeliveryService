@@ -17,6 +17,10 @@ namespace DeliveryService.Models
         [ForeignKey("DriverId")]
         public virtual Driver Driver { get; set; }
 
+        public string VehicleType { get; set; }
+
+        public int VehicleYear { get; set; }
+
         [Required]
         public string LicenceState { get; set; }
 
