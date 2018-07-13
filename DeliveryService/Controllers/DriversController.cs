@@ -14,6 +14,11 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+
+        public ActionResult Customer()
+        {
+            return View();
+        }
         public ActionResult DriverHome()
         {
             return View();

@@ -1,0 +1,101 @@
+﻿<style>
+    #map {
+        height: 600px;
+        width: 800px;
+    }
+</style>
+
+<div class="row">
+    <div id="map"></div>
+    <script>
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: 42.987162, lng: -87.903224 },
+                    mapTypeId: google.maps.MapTypeId.SATELLITE,
+                    zoom: 14
+                });
+
+                addMarker({
+                    coords: { lat: 42.960927, lng: -87.938545 },
+                    iconImage: 'http://maps.google.com/mapfiles/kml/shapes/motorcycling.png',
+                    content: ""
+                });
+
+                var contentString = '<div id="content">' +
+         '<div id="siteNotice">' +
+         '</div>' +
+         '<h1 id="firstHeading" class="firstHeading">Vasil Zhmendak</h1>' +
+         '<div id="bodyContent">' +
+
+         '</div>' +
+         '</div>';
+                addMarker({
+                    coords: { lat:43.061033 , lng: -87.886445 },
+                    iconImage: 'http://maps.google.com/mapfiles/kml/shapes/man.png',
+                    content: contentString
+
+
+
+                });
+
+                var contentString2 = '<div id="content">' +
+    '<div id="siteNotice">' +
+    '</div>' +
+    '<h1 id="firstHeading" class="firstHeading">Mikola Zhmendak</h1>' +
+    '<div id="bodyContent">' +
+
+  
+
+    '</div>' +
+    '</div>';
+                addMarker({
+                    coords: { lat: 43.001960, lng: -87.905338 },
+                    iconImage: 'http://maps.google.com/mapfiles/kml/shapes/man.png',
+                    content: contentString2
+                });
+
+                var contentString1 = '<div id="content">' +
+    '<div id="siteNotice">' +
+    '</div>' +
+    '<h1 id="firstHeading" class="firstHeading">Chad Gustovsky</h1>' +
+     '<div id="bodyContent">' +
+
+
+    '</div>' +
+    '</div>';
+
+                    addMarker({
+                        coords: { lat: 43.008884, lng: -87.968199 },
+                        iconImage: 'http://maps.google.com/mapfiles/kml/shapes/man.png',
+                        content: contentString1
+                    });
+
+                    function addMarker(props) {
+
+                        //  var image = 'http://maps.google.com/mapfiles/kml/shapes/man.png';
+                        var marker = new google.maps.Marker({
+                            position: props.coords,
+                            map: map,
+                            icon: props.iconImage
+
+                        });
+         if (props.content) {
+                        var infoWindow = new google.maps.InfoWindow({
+                            content: props.content
+                        });
+                        marker.addListener('click', function () {
+                            infoWindow.open(map, marker)
+                        });
+
+                    }
+                }
+            }
+
+
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDAVUCRfT4tOXt1ThRoWc4SSPBgVUXkUP4&callback=initMap">
+    </script>
+</div>
