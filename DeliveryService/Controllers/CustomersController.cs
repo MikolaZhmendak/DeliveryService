@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DeliveryService.Models;
+using Microsoft.AspNet.Identity;
 
 namespace DeliveryService.Controllers
 {
@@ -54,6 +55,8 @@ namespace DeliveryService.Controllers
         // GET: Customers
         public ActionResult Index()
         {
+            var currentUserId = User.Identity.GetUserId();
+            var customer = db.Customer.Where(x => x.UserId == currentUserId).ToList();
             return View(db.Customer.ToList());
         }
 
@@ -87,6 +90,8 @@ namespace DeliveryService.Controllers
         {
             if (ModelState.IsValid)
             {
+
+                customer.UserId = User.Identity.GetUserId();
                 db.Customer.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("NewCustomer");

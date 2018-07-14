@@ -234,6 +234,10 @@
     <Compile Include="Migrations\201807122316137_initial.Designer.cs">
       <DependentUpon>201807122316137_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807141418499_update.cs" />
+    <Compile Include="Migrations\201807141418499_update.Designer.cs">
+      <DependentUpon>201807141418499_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
@@ -380,6 +384,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807122316137_initial.resx">
       <DependentUpon>201807122316137_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807141418499_update.resx">
+      <DependentUpon>201807141418499_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
