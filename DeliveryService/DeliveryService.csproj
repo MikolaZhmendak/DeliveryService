@@ -229,6 +229,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807161444503_first.cs" />
+    <Compile Include="Migrations\201807161444503_first.Designer.cs">
+      <DependentUpon>201807161444503_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807161519013_added row to the background table.cs" />
+    <Compile Include="Migrations\201807161519013_added row to the background table.Designer.cs">
+      <DependentUpon>201807161519013_added row to the background table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807161527273_format chnage.cs" />
+    <Compile Include="Migrations\201807161527273_format chnage.Designer.cs">
+      <DependentUpon>201807161527273_format chnage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807161547589_fromat.cs" />
+    <Compile Include="Migrations\201807161547589_fromat.Designer.cs">
+      <DependentUpon>201807161547589_fromat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
     <Compile Include="Models\CreditCard.cs" />
@@ -317,7 +334,6 @@
     <Content Include="Views\Drivers\Edit.cshtml" />
     <Content Include="Views\Drivers\Index.cshtml" />
     <Content Include="Views\Drivers\Background.cshtml" />
-    <Content Include="Views\Drivers\Vehicle.cshtml" />
     <Content Include="Views\Drivers\Welcome.cshtml" />
     <Content Include="Views\Drivers\DriverHome.cshtml" />
     <Content Include="Views\Customers\Create.cshtml" />
@@ -340,7 +356,6 @@
     <Content Include="Views\CustomerOrders\Stripe.cshtml" />
     <Content Include="Views\CreditCards\Create.cshtml" />
     <Content Include="Views\CreditCards\PaymentMade.cshtml" />
-    <Content Include="Views\Drivers\InsuranceInformation.cshtml" />
     <Content Include="Views\Employers\Create.cshtml" />
     <Content Include="Views\Employers\Delete.cshtml" />
     <Content Include="Views\Employers\Details.cshtml" />
@@ -350,6 +365,7 @@
     <Content Include="Views\Employers\Home.cshtml" />
     <Content Include="Views\Employers\DriversView.cshtml" />
     <Content Include="Views\Drivers\Customer.cshtml" />
+    <Content Include="Views\Drivers\BackgroundConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -363,6 +379,20 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807161444503_first.resx">
+      <DependentUpon>201807161444503_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807161519013_added row to the background table.resx">
+      <DependentUpon>201807161519013_added row to the background table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807161527273_format chnage.resx">
+      <DependentUpon>201807161527273_format chnage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807161547589_fromat.resx">
+      <DependentUpon>201807161547589_fromat.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -30,16 +30,20 @@ namespace DeliveryService.Models
         //    public long Ssn { get; set; }
 
         [Display(Name = "Social Security")]
-        public string Ssn { get; set; }
+        public long Ssn { get; set; }
 
         public string VehicleType { get; set; }
         public int VehicleYear { get; set; }
-       
-        public int DrivingLicence { get; set; }
+
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:####-####-####-##}")]
+        public long DrivingLicence { get; set; }
+
         public string LicenceState { get; set; }
         public string InsuranceProvider { get; set; }
-        public int ExpirationDate { get; set; }
 
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime? ExpirationDate{ get; set; }
+       
 
 
 

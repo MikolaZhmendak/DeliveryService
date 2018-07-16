@@ -79,13 +79,13 @@ namespace DeliveryService.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Background([Bind(Include = "BackgroundId, DriverId, Date_of_Birth, Ssn")] BackgroundCheck backgroundCheck)
+        public ActionResult Background([Bind(Include = "BackgroundId, DriverId, Date_of_Birth, Ssn, VehicleType, VehicleYear, DrivingLicence, LicenceState, InsuranceProvider, ExpirationDate")] BackgroundCheck backgroundCheck)
         {
             if (ModelState.IsValid)
             {
                 db.BackgroundCheck.Add(backgroundCheck);
                 db.SaveChanges();
-                return RedirectToAction("Vehicle");
+                return RedirectToAction("BackgroundConfirmation");
             }
             return View(backgroundCheck);
         }
@@ -96,7 +96,10 @@ namespace DeliveryService.Controllers
           
             return View();
         }
-
+        public ActionResult BackgroundConfirmation()
+        {
+            return View();
+        }
 
         // GET: Drivers/Edit/5
         public ActionResult Edit(int? id)
