@@ -32,6 +32,16 @@ namespace DeliveryService.Models
         [Display(Name = "Social Security")]
         public string Ssn { get; set; }
 
+        public string VehicleType { get; set; }
+        public int VehicleYear { get; set; }
+       
+        public int DrivingLicence { get; set; }
+        public string LicenceState { get; set; }
+        public string InsuranceProvider { get; set; }
+        public int ExpirationDate { get; set; }
+
+
+
 
 
     }

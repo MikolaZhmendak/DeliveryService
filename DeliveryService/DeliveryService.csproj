@@ -224,7 +224,6 @@
     <Compile Include="Controllers\EmployersController.cs" />
     <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\InsuranceInfromationsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\usersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -341,11 +340,6 @@
     <Content Include="Views\CustomerOrders\Stripe.cshtml" />
     <Content Include="Views\CreditCards\Create.cshtml" />
     <Content Include="Views\CreditCards\PaymentMade.cshtml" />
-    <Content Include="Views\InsuranceInfromations\Create.cshtml" />
-    <Content Include="Views\InsuranceInfromations\Delete.cshtml" />
-    <Content Include="Views\InsuranceInfromations\Details.cshtml" />
-    <Content Include="Views\InsuranceInfromations\Edit.cshtml" />
-    <Content Include="Views\InsuranceInfromations\Index.cshtml" />
     <Content Include="Views\Drivers\InsuranceInformation.cshtml" />
     <Content Include="Views\Employers\Create.cshtml" />
     <Content Include="Views\Employers\Delete.cshtml" />
