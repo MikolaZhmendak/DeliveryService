@@ -233,9 +233,26 @@
     <Compile Include="Migrations\201807161555311_first.Designer.cs">
       <DependentUpon>201807161555311_first.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807161803122_new one.cs" />
+    <Compile Include="Migrations\201807161803122_new one.Designer.cs">
+      <DependentUpon>201807161803122_new one.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807162142241_change data format.cs" />
+    <Compile Include="Migrations\201807162142241_change data format.Designer.cs">
+      <DependentUpon>201807162142241_change data format.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807162150049_new change.cs" />
+    <Compile Include="Migrations\201807162150049_new change.Designer.cs">
+      <DependentUpon>201807162150049_new change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807162155020_new.cs" />
+    <Compile Include="Migrations\201807162155020_new.Designer.cs">
+      <DependentUpon>201807162155020_new.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
+    <Compile Include="Models\BackgroundViewModel.cs" />
     <Compile Include="Models\CreditCard.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerOrder.cs" />
@@ -371,6 +388,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807161555311_first.resx">
       <DependentUpon>201807161555311_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807161803122_new one.resx">
+      <DependentUpon>201807161803122_new one.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807162142241_change data format.resx">
+      <DependentUpon>201807162142241_change data format.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807162150049_new change.resx">
+      <DependentUpon>201807162150049_new change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807162155020_new.resx">
+      <DependentUpon>201807162155020_new.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

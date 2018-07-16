@@ -8,11 +8,8 @@ using System.Web;
 
 namespace DeliveryService.Models
 {
-    public class BackgroundCheck
+    public class BackgroundViewModel
     {
-
-        [Key]
-
         public int BackgroundId { get; set; }
 
         public int? DriverId { get; set; }
@@ -25,9 +22,6 @@ namespace DeliveryService.Models
         [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? Date_of_Birth { get; set; }
 
-        //    [Required(ErrorMessage = "SSN is required")]
-        //      [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:###-##-####}")]
-        //    public long Ssn { get; set; }
 
         [Display(Name = "Social Security")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:###-##-####}")]
@@ -43,11 +37,12 @@ namespace DeliveryService.Models
         public string InsuranceProvider { get; set; }
 
         [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime? ExpirationDate{ get; set; }
-       
+        public DateTime? ExpirationDate { get; set; }
 
+        public virtual string FirstName { get; set; }
+        public virtual string LastName { get; set; }
 
-
-
+        [DataType(DataType.PhoneNumber), DisplayFormat(DataFormatString = "{0:(###)-###-####}", ApplyFormatInEditMode = true)]
+        public long PhoneNumber { get; set; }
     }
 }

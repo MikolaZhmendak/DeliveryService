@@ -28,7 +28,7 @@
 
             @if (User.IsInRole("Employer"))
             {
-                <li> @Html.ActionLink("Drivers", "View", "Employers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
+                <li> @Html.ActionLink("Drivers", "DriversView", "Employers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
                
             }
             <li>

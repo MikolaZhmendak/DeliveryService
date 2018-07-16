@@ -10,8 +10,9 @@ namespace DeliveryService.Models
     {
         [Key]
         public int CreditCardId { get; set; }
-        
-        public  int CreditCardNumber { get; set; }
+
+        [DataType(DataType.CreditCard), DisplayFormat(DataFormatString = "{0:####-####-####-####", ApplyFormatInEditMode = true)]
+        public  long CreditCardNumber { get; set; }
 
         public  PaymentType CardType { get; set; }
         

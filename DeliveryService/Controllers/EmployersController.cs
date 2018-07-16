@@ -26,7 +26,10 @@ namespace DeliveryService.Controllers
         }
         public ActionResult DriversView()
         {
-            return View(db.Driver);
+            List<BackgroundCheck> driverCheck = db.BackgroundCheck.ToList();
+            BackgroundViewModel backgroundVM = new BackgroundViewModel();
+            List<BackgroundViewModel> backgroundListVm = driverCheck.Select(x => new BackgroundViewModel { FirstName = x.Driver.FirstName, LastName = x.Driver.LastName, PhoneNumber = x.Driver.PhoneNumber, InsuranceProvider = x.InsuranceProvider, ExpirationDate = x.ExpirationDate, DrivingLicence = x.DrivingLicence, LicenceState = x.LicenceState, VehicleType = x.VehicleType, VehicleYear = x.VehicleYear, Date_of_Birth = x.Date_of_Birth, Ssn = x.Ssn }).ToList();
+            return View(backgroundListVm);
         }
         // GET: Employers/Details/5
         public ActionResult Details(string id)
@@ -60,7 +63,7 @@ namespace DeliveryService.Controllers
             {
                 db.Employer.Add(employer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Home");
             }
 
             return View(employer);
