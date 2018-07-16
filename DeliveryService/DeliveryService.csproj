@@ -229,21 +229,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807161444503_first.cs" />
-    <Compile Include="Migrations\201807161444503_first.Designer.cs">
-      <DependentUpon>201807161444503_first.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807161519013_added row to the background table.cs" />
-    <Compile Include="Migrations\201807161519013_added row to the background table.Designer.cs">
-      <DependentUpon>201807161519013_added row to the background table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807161527273_format chnage.cs" />
-    <Compile Include="Migrations\201807161527273_format chnage.Designer.cs">
-      <DependentUpon>201807161527273_format chnage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807161547589_fromat.cs" />
-    <Compile Include="Migrations\201807161547589_fromat.Designer.cs">
-      <DependentUpon>201807161547589_fromat.cs</DependentUpon>
+    <Compile Include="Migrations\201807161555311_first.cs" />
+    <Compile Include="Migrations\201807161555311_first.Designer.cs">
+      <DependentUpon>201807161555311_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -381,17 +369,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807161444503_first.resx">
-      <DependentUpon>201807161444503_first.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807161519013_added row to the background table.resx">
-      <DependentUpon>201807161519013_added row to the background table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807161527273_format chnage.resx">
-      <DependentUpon>201807161527273_format chnage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807161547589_fromat.resx">
-      <DependentUpon>201807161547589_fromat.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807161555311_first.resx">
+      <DependentUpon>201807161555311_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

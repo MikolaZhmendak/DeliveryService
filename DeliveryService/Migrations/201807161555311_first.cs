@@ -14,13 +14,13 @@ namespace DeliveryService.Migrations
                         BackgroundId = c.Int(nullable: false, identity: true),
                         DriverId = c.Int(),
                         Date_of_Birth = c.DateTime(nullable: false),
-                        Ssn = c.String(),
+                        Ssn = c.Long(nullable: false),
                         VehicleType = c.String(),
                         VehicleYear = c.Int(nullable: false),
-                        DrivingLicence = c.Int(nullable: false),
+                        DrivingLicence = c.Long(nullable: false),
                         LicenceState = c.String(),
                         InsuranceProvider = c.String(),
-                        ExpirationDate = c.Int(nullable: false),
+                        ExpirationDate = c.DateTime(),
                     })
                 .PrimaryKey(t => t.BackgroundId)
                 .ForeignKey("dbo.Drivers", t => t.DriverId)
