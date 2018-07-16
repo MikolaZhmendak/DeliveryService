@@ -230,15 +230,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807122316137_initial.cs" />
-    <Compile Include="Migrations\201807122316137_initial.Designer.cs">
-      <DependentUpon>201807122316137_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807141418499_update.cs" />
-    <Compile Include="Migrations\201807141418499_update.Designer.cs">
-      <DependentUpon>201807141418499_update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
     <Compile Include="Models\CreditCard.cs" />
@@ -247,12 +238,10 @@
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\Employer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\InsuranceInfromation.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MinimumAgeAttribute.cs" />
     <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Models\StripeKeys.cs" />
-    <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -380,14 +369,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807122316137_initial.resx">
-      <DependentUpon>201807122316137_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807141418499_update.resx">
-      <DependentUpon>201807141418499_update.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

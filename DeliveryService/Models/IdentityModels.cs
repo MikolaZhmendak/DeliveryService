@@ -33,10 +33,10 @@ namespace DeliveryService.Models
         public DbSet<Customer> Customer { get; set; }
         public DbSet<CustomerOrder> CustomerOrder { get; set; }
         public DbSet<Driver> Driver { get; set; }
-        public DbSet<Vehicle> Vehicle { get; set; }
+       
         public DbSet<Restaurant> Restaurant { get; set; }
         public DbSet<CreditCard> CreditCard { get; set; }
-        public DbSet<InsuranceInfromation> InsuranceInfromation { get; set; }
+        
         public DbSet<Employer> Employer { get; set; }
       //  AIzaSyDAVUCRfT4tOXt1ThRoWc4SSPBgVUXkUP4
     }

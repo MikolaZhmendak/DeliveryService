@@ -90,50 +90,6 @@ namespace DeliveryService.Controllers
             return View(backgroundCheck);
         }
 
-
-        public ActionResult Vehicle(int? driverId)
-        {
-            Vehicle vehicle = new Vehicle();
-            vehicle.DriverId = driverId;
-
-            return View(vehicle);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Vehicle([Bind(Include = "VehicleId, DriverId, VehicleType, VehicleYear, DrivingLicence, LicenceState")] Vehicle vehicle)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Vehicle.Add(vehicle);
-                db.SaveChanges();
-                return RedirectToAction("InsuranceInformation");
-            }
-            return View(vehicle);
-        }
-
-        public ActionResult InsuranceInformation(int? driverId)
-        {
-            InsuranceInfromation insuranceInformation = new InsuranceInfromation();
-            insuranceInformation.DriverId = driverId;
-           
-
-            return View(insuranceInformation);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult InsuranceInformation([Bind(Include = "InsuranceInformationId, DriverId, InsuranceProvider,Expiration_Date")] InsuranceInfromation insuranceInformation)
-        {
-            if (ModelState.IsValid)
-            {
-                db.InsuranceInfromation.Add(insuranceInformation);
-                db.SaveChanges();
-                return RedirectToAction("Welcome");
-            }
-            return View(insuranceInformation);
-        }
-
         public ActionResult Welcome()
 
         {
