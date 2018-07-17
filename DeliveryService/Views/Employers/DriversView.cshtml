@@ -44,6 +44,9 @@
         <th>
             @Html.DisplayNameFor(model => model.DrivingLicence)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsChecked)
+        </th>
        
         <th></th>
     </tr>
@@ -84,6 +87,10 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DrivingLicence)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.IsChecked)
             </td>
             </tr>
     }

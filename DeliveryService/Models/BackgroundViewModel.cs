@@ -9,7 +9,7 @@ using System.Web;
 namespace DeliveryService.Models
 {
     public class BackgroundViewModel
-    {
+    { 
         public int BackgroundId { get; set; }
 
         public int? DriverId { get; set; }
@@ -44,5 +44,7 @@ namespace DeliveryService.Models
 
         [DataType(DataType.PhoneNumber), DisplayFormat(DataFormatString = "{0:(###)-###-####}", ApplyFormatInEditMode = true)]
         public long PhoneNumber { get; set; }
+
+        public bool IsChecked { get; set; }
     }
 }

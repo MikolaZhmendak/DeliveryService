@@ -225,29 +225,14 @@
     <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrderDriverViewsController.cs" />
     <Compile Include="Controllers\usersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807161555311_first.cs" />
-    <Compile Include="Migrations\201807161555311_first.Designer.cs">
-      <DependentUpon>201807161555311_first.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807161803122_new one.cs" />
-    <Compile Include="Migrations\201807161803122_new one.Designer.cs">
-      <DependentUpon>201807161803122_new one.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807162142241_change data format.cs" />
-    <Compile Include="Migrations\201807162142241_change data format.Designer.cs">
-      <DependentUpon>201807162142241_change data format.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807162150049_new change.cs" />
-    <Compile Include="Migrations\201807162150049_new change.Designer.cs">
-      <DependentUpon>201807162150049_new change.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807162155020_new.cs" />
-    <Compile Include="Migrations\201807162155020_new.Designer.cs">
-      <DependentUpon>201807162155020_new.cs</DependentUpon>
+    <Compile Include="Migrations\201807171558578_first migration.cs" />
+    <Compile Include="Migrations\201807171558578_first migration.Designer.cs">
+      <DependentUpon>201807171558578_first migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -261,6 +246,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MinimumAgeAttribute.cs" />
+    <Compile Include="Models\OrderDriverView.cs" />
     <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Models\StripeKeys.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -371,6 +357,9 @@
     <Content Include="Views\Employers\DriversView.cshtml" />
     <Content Include="Views\Drivers\Customer.cshtml" />
     <Content Include="Views\Drivers\BackgroundConfirmation.cshtml" />
+    <Content Include="Views\OrderDriverViews\Index.cshtml" />
+    <Content Include="Views\OrderDriverViews\Accept.cshtml" />
+    <Content Include="Views\Employers\AcceptedOrders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -386,20 +375,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807161555311_first.resx">
-      <DependentUpon>201807161555311_first.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807161803122_new one.resx">
-      <DependentUpon>201807161803122_new one.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807162142241_change data format.resx">
-      <DependentUpon>201807162142241_change data format.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807162150049_new change.resx">
-      <DependentUpon>201807162150049_new change.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807162155020_new.resx">
-      <DependentUpon>201807162155020_new.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807171558578_first migration.resx">
+      <DependentUpon>201807171558578_first migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -3,7 +3,7 @@ namespace DeliveryService.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class first : DbMigration
+    public partial class firstmigration : DbMigration
     {
         public override void Up()
         {
@@ -43,7 +43,7 @@ namespace DeliveryService.Migrations
                 c => new
                     {
                         CreditCardId = c.Int(nullable: false, identity: true),
-                        CreditCardNumber = c.Int(nullable: false),
+                        CreditCardNumber = c.Long(nullable: false),
                         CardType = c.Int(nullable: false),
                         ExparationDate = c.Int(nullable: false),
                         CVC = c.Int(nullable: false),
@@ -155,6 +155,23 @@ namespace DeliveryService.Migrations
                 .PrimaryKey(t => t.FirstName);
             
             CreateTable(
+                "dbo.OrderDriverViews",
+                c => new
+                    {
+                        OrderDriverViewID = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        PhoneNumber = c.Long(nullable: false),
+                        RestaurantName = c.String(),
+                        ItemOrdered = c.String(),
+                        Quantity = c.Int(nullable: false),
+                        CurbeSide = c.Boolean(nullable: false),
+                        WalkIn = c.Boolean(nullable: false),
+                        Tips = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.OrderDriverViewID);
+            
+            CreateTable(
                 "dbo.Restaurants",
                 c => new
                     {
@@ -197,6 +214,7 @@ namespace DeliveryService.Migrations
             DropIndex("dbo.BackgroundChecks", new[] { "DriverId" });
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Restaurants");
+            DropTable("dbo.OrderDriverViews");
             DropTable("dbo.Employers");
             DropTable("dbo.CustomerOrders");
             DropTable("dbo.AspNetUserRoles");

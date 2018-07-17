@@ -13,7 +13,12 @@ namespace DeliveryService.Controllers
     public class EmployersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+    
+     public ActionResult AcceptedOrders()
+        {
+            var completedOrders = db.OrderDriverView.Find();
+            return View(completedOrders);
+        }
 
       public ActionResult Home()
         {
