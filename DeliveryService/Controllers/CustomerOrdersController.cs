@@ -20,13 +20,13 @@ namespace DeliveryService.Controllers
 
         public ActionResult CurrentOrder()
         {
-            var currentOrder = db.CustomerOrder.Where(x => x.Date_of_Order == DateTime.);
+            var currentOrder = db.CustomerOrder.Where(x => x.Date_of_Order >= DateTime.Today);
             return View(currentOrder);
         }
 
         public ActionResult PastOrders()
         {
-            var pastOrder = db.CustomerOrder.Where(x => x.Date_of_Order < DateTime.Today);
+            var pastOrder = db.CustomerOrder.Where(x => x.Date_of_Order < DateTime.Now);
                 return View(pastOrder);
         }
         public ActionResult Stripe()

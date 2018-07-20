@@ -234,6 +234,10 @@
     <Compile Include="Migrations\201807190155324_added attribute 2.Designer.cs">
       <DependentUpon>201807190155324_added attribute 2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807202324543_changed time of the day.cs" />
+    <Compile Include="Migrations\201807202324543_changed time of the day.Designer.cs">
+      <DependentUpon>201807202324543_changed time of the day.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
@@ -381,6 +385,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807190155324_added attribute 2.resx">
       <DependentUpon>201807190155324_added attribute 2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807202324543_changed time of the day.resx">
+      <DependentUpon>201807202324543_changed time of the day.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

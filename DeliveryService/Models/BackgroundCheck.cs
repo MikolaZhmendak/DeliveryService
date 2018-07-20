@@ -35,8 +35,10 @@ namespace DeliveryService.Models
 
         public string VehicleType { get; set; }
 
-    //    [MinimumAge(22)]
-      //  [Required(ErrorMessage = "Must be newer then 1996")]
+        //    [MinimumAge(22)]
+        //  [Required(ErrorMessage = "Must be newer then 1996")]
+        [Range(1996, 2018,
+             ErrorMessage = " The year for{0} must be between {1} and {2}.")]
         public int VehicleYear { get; set; }
 
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:####-####-####-##}")]

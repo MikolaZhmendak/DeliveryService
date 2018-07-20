@@ -24,7 +24,7 @@ namespace DeliveryService.Models
 
 
         [DisplayName("Date of Order")]
-        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.DateTime), DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? Date_of_Order { get; set; }
 
         public bool CurbeSide { get; set; }
