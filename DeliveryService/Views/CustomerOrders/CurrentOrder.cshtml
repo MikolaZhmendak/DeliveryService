@@ -1,0 +1,66 @@
+﻿@model IEnumerable<DeliveryService.Models.CustomerOrder>
+
+@{
+    ViewBag.Title = "CurrentOrder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>CurrentOrder</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RestaurantName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemOrdered)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_of_Order)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurbeSide)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WalkIn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tips)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RestaurantName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemOrdered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_of_Order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurbeSide)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WalkIn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tips)
+            </td>
+         
+        </tr>
+    }
+
+
+</table>

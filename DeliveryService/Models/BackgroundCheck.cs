@@ -34,6 +34,9 @@ namespace DeliveryService.Models
         public long Ssn { get; set; }
 
         public string VehicleType { get; set; }
+
+    //    [MinimumAge(22)]
+      //  [Required(ErrorMessage = "Must be newer then 1996")]
         public int VehicleYear { get; set; }
 
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:####-####-####-##}")]

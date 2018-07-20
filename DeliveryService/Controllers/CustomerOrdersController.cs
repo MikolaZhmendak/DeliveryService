@@ -18,6 +18,17 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        public ActionResult CurrentOrder()
+        {
+            var currentOrder = db.CustomerOrder.Where(x => x.Date_of_Order == DateTime.);
+            return View(currentOrder);
+        }
+
+        public ActionResult PastOrders()
+        {
+            var pastOrder = db.CustomerOrder.Where(x => x.Date_of_Order < DateTime.Today);
+                return View(pastOrder);
+        }
         public ActionResult Stripe()
         {
             var PublishableKey = ConfigurationManager.AppSettings["pk_test_c1nYrefZZ9bdIDYx1qebUDkW"];

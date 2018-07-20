@@ -16,7 +16,10 @@ namespace DeliveryService.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
        
-
+        public ActionResult CustomerHome()
+        {
+            return View();
+        }
         public ActionResult Search()
         {
             return View(db.Restaurant.ToList());
@@ -48,10 +51,7 @@ namespace DeliveryService.Controllers
 
         
 
-        public ActionResult CustomerHome()
-        {
-            return View();
-        }
+       
         // GET: Customers
         public ActionResult Index()
         {

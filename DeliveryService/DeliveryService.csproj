@@ -230,9 +230,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807171558578_first migration.cs" />
-    <Compile Include="Migrations\201807171558578_first migration.Designer.cs">
-      <DependentUpon>201807171558578_first migration.cs</DependentUpon>
+    <Compile Include="Migrations\201807190155324_added attribute 2.cs" />
+    <Compile Include="Migrations\201807190155324_added attribute 2.Designer.cs">
+      <DependentUpon>201807190155324_added attribute 2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -355,11 +355,15 @@
     <Content Include="Views\Employers\EmployerHome.cshtml" />
     <Content Include="Views\Employers\Home.cshtml" />
     <Content Include="Views\Employers\DriversView.cshtml" />
-    <Content Include="Views\Drivers\Customer.cshtml" />
+    <Content Include="Views\Drivers\Customer.cshtml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Drivers\BackgroundConfirmation.cshtml" />
     <Content Include="Views\OrderDriverViews\Index.cshtml" />
     <Content Include="Views\OrderDriverViews\Accept.cshtml" />
     <Content Include="Views\Employers\AcceptedOrders.cshtml" />
+    <Content Include="Views\CustomerOrders\CurrentOrder.cshtml" />
+    <Content Include="Views\CustomerOrders\PastOrders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -375,8 +379,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807171558578_first migration.resx">
-      <DependentUpon>201807171558578_first migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807190155324_added attribute 2.resx">
+      <DependentUpon>201807190155324_added attribute 2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

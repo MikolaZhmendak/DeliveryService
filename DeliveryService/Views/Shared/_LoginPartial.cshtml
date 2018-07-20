@@ -11,10 +11,15 @@
 {
     <li> @Html.ActionLink("Home", "CustomerHome", "Customers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
     <li>@Html.ActionLink("Search", "Search", "Customers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
-    <li>@Html.ActionLink("CustomerOrders", "Create", "CustomerOrders", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
+    <li>@Html.ActionLink("Customer Orders", "Create", "CustomerOrders", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
  //   <li>@Html.ActionLink("Payment", "Index", "Payments", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
-    <li>@Html.ActionLink("History", "Index", "History", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
-
+     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Order History<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Current Order", "CurrentOrder", "CustomerOrders")</li> @*View classes/ button to create*@
+                            <li>@Html.ActionLink("Past Orders", "PastOrders", "CustomerOrders")</li>
+                        </ul>
+                    </li>
 }
 
             @if (User.IsInRole("Driver"))
