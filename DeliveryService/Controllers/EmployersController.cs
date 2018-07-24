@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DeliveryService.Models;
+using System.Net.Mail;
+using System.Text;
 
 namespace DeliveryService.Controllers
 {
@@ -14,6 +16,42 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
     
+
+     public JsonResult SendEmail()
+        {
+            bool result = false;
+            result = SendNewEmail("zhmendakm@gmail.com", "Candidate Backgroundcheck Form", "<p>Hello Andy,<br /> I need to run a complete background check for the following candidate. If you have any questions please do not hesitate to contact us back. <br />  Regards Delivery Service Inc. </p>");
+
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        public bool SendNewEmail(string toEmail, string subject, string emailBody)
+        {
+            try
+            {
+
+                string senderEmail = System.Configuration.ConfigurationManager.AppSettings["SenderEmail"].ToString();
+                string senderPassword = System.Configuration.ConfigurationManager.AppSettings["SenderPassword"].ToString();
+                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+                client.EnableSsl = true;
+                client.Timeout = 100000;
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.UseDefaultCredentials = false;
+                client.Credentials = new NetworkCredential(senderEmail, senderPassword);
+                return true;
+
+                MailMessage ms = new MailMessage(senderEmail, toEmail, subject, emailBody);
+                ms.IsBodyHtml = true;
+                ms.BodyEncoding = UTF8Encoding.UTF8;
+
+                client.Send(ms);
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        }
      public ActionResult AcceptedOrders()
         {
             var completedOrders = db.OrderDriverView.Find();

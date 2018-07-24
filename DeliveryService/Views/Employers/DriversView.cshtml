@@ -44,9 +44,7 @@
         <th>
             @Html.DisplayNameFor(model => model.DrivingLicence)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsChecked)
-        </th>
+       
        
         <th></th>
     </tr>
@@ -89,10 +87,29 @@
                 @Html.DisplayFor(modelItem => item.DrivingLicence)
             </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.IsChecked)
-            </td>
+           <td>
+               <a class="btn btn-danger" onclick="SendEmail()">E-Mail This Form</a>
+           </td>
             </tr>
     }
 </table>
+
+
+   
+        
+
+    
 </div>
+
+<script>
+    var sendEmail = function()
+    {
+        $.ajax({
+            type: "Post",
+            url: "/Employers/SendEmail",
+            success: function (data) {
+                alert("Message Send");
+            }
+        })
+    }
+</script>

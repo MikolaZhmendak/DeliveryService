@@ -238,6 +238,10 @@
     <Compile Include="Migrations\201807202324543_changed time of the day.Designer.cs">
       <DependentUpon>201807202324543_changed time of the day.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807241910477_deleted row in table.cs" />
+    <Compile Include="Migrations\201807241910477_deleted row in table.Designer.cs">
+      <DependentUpon>201807241910477_deleted row in table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
@@ -388,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807202324543_changed time of the day.resx">
       <DependentUpon>201807202324543_changed time of the day.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807241910477_deleted row in table.resx">
+      <DependentUpon>201807241910477_deleted row in table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
