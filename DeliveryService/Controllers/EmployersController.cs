@@ -20,7 +20,7 @@ namespace DeliveryService.Controllers
      public JsonResult SendMailToUser()
         {
             bool result = false;
-            result = SendEmail("zhmendakm@gmail.com", "Candidate Backgroundcheck Form", "<p>Hello Andy,<br /> I need to run a complete background check for the following candidate. If you have any questions please do not hesitate to contact us back. <br />  Regards Delivery Service Inc. </p>");
+            result = SendEmail("zhmendakm@gmail.com", "Candidate Backgroundcheck Form", "<p>Hello Andy,<br /> I need to run a complete background check for the following candidate.<br/> First Name: If you have any questions please do not hesitate to contact us back. <br />  Regards Delivery Service Inc. </p>");
 
 
             return Json(result, JsonRequestBehavior.AllowGet);
@@ -46,6 +46,8 @@ namespace DeliveryService.Controllers
                 mailMessage.BodyEncoding = UTF8Encoding.UTF8;
 
                 client.Send(mailMessage);
+
+                
                 return true;
             }
             catch(Exception ex)

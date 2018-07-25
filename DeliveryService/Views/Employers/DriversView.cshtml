@@ -45,9 +45,10 @@
             @Html.DisplayNameFor(model => model.DrivingLicence)
         </th>
        
-       
-        <th></th>
-    </tr>
+
+
+            <th></th>
+</tr>
 
 
     @foreach (var item in Model)
@@ -86,17 +87,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DrivingLicence)
             </td>
+           
+              <td>
+                    <a class="btn btn-danger" onclick="SendEmail()">E-Mail This Form</a>
+                </td>
 
-           <td>
-               <a class="btn btn-danger" onclick="SendEmail()">E-Mail This Form</a>
-           </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.BackgroundId })
-            </td>
-            </tr>
-            
-               
-    }
+</tr>
+      
+
+            }
 </table>
 
     
