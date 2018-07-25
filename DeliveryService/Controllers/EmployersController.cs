@@ -16,17 +16,17 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
     
-
-     public JsonResult SendEmail()
+        
+     public JsonResult SendMailToUser()
         {
             bool result = false;
-            result = SendNewEmail("zhmendakm@gmail.com", "Candidate Backgroundcheck Form", "<p>Hello Andy,<br /> I need to run a complete background check for the following candidate. If you have any questions please do not hesitate to contact us back. <br />  Regards Delivery Service Inc. </p>");
+            result = SendEmail("zhmendakm@gmail.com", "Candidate Backgroundcheck Form", "<p>Hello Andy,<br /> I need to run a complete background check for the following candidate. If you have any questions please do not hesitate to contact us back. <br />  Regards Delivery Service Inc. </p>");
 
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        public bool SendNewEmail(string toEmail, string subject, string emailBody)
+        public bool SendEmail(string toEmail, string subject, string emailBody)
         {
             try
             {
@@ -39,13 +39,14 @@ namespace DeliveryService.Controllers
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 client.UseDefaultCredentials = false;
                 client.Credentials = new NetworkCredential(senderEmail, senderPassword);
+               
+
+                MailMessage mailMessage = new MailMessage(senderEmail, toEmail, subject, emailBody);
+                mailMessage.IsBodyHtml = true;
+                mailMessage.BodyEncoding = UTF8Encoding.UTF8;
+
+                client.Send(mailMessage);
                 return true;
-
-                MailMessage ms = new MailMessage(senderEmail, toEmail, subject, emailBody);
-                ms.IsBodyHtml = true;
-                ms.BodyEncoding = UTF8Encoding.UTF8;
-
-                client.Send(ms);
             }
             catch(Exception ex)
             {

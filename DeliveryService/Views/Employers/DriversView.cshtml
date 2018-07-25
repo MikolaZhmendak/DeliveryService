@@ -6,10 +6,10 @@
 }
 <br />
 <br />
-
+<link href="~/Content/bootstrap-myversion.css" rel="stylesheet" />
 
 <div class="container" style="width:120%; margin-top:2%">
-    <table class="table table-striped">
+    <table class="table table-bordered">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.FirstName)
@@ -90,11 +90,16 @@
            <td>
                <a class="btn btn-danger" onclick="SendEmail()">E-Mail This Form</a>
            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.BackgroundId })
+            </td>
             </tr>
+            
+               
     }
 </table>
 
-
+    
    
         
 
@@ -102,13 +107,13 @@
 </div>
 
 <script>
-    var sendEmail = function()
+    var SendEmail = function()
     {
         $.ajax({
             type: "Post",
-            url: "/Employers/SendEmail",
+            url: "/Employers/SendMailToUser",
             success: function (data) {
-                alert("Message Send");
+                alert("E-mail Send");
             }
         })
     }
