@@ -87,11 +87,9 @@
                 @Html.DisplayFor(modelItem => item.DrivingLicence)
             </td>
 
-           <td>
-               <a class="btn btn-danger" onclick="SendEmail()">E-Mail This Form</a>
-           </td>
+          
             <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.BackgroundId })
+                @Html.ActionLink("E-mail this form", "Email", new { id = item.BackgroundId })
             </td>
             </tr>
             
@@ -106,15 +104,3 @@
     
 </div>
 
-<script>
-    var SendEmail = function()
-    {
-        $.ajax({
-            type: "Post",
-            url: "/Employers/SendMailToUser",
-            success: function (data) {
-                alert("E-mail Send");
-            }
-        })
-    }
-</script>

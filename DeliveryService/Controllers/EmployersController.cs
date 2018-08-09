@@ -16,42 +16,10 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
     
-        
-     public JsonResult SendMailToUser()
+
+       public  ActionResult Email()
         {
-            bool result = false;
-            result = SendEmail("zhmendakm@gmail.com", "Candidate Backgroundcheck Form", "<p>Hello Andy,<br /> I need to run a complete background check for the following candidate. If you have any questions please do not hesitate to contact us back. <br />  Regards Delivery Service Inc. </p>");
-
-
-            return Json(result, JsonRequestBehavior.AllowGet);
-        }
-
-        public bool SendEmail(string toEmail, string subject, string emailBody)
-        {
-            try
-            {
-
-                string senderEmail = System.Configuration.ConfigurationManager.AppSettings["SenderEmail"].ToString();
-                string senderPassword = System.Configuration.ConfigurationManager.AppSettings["SenderPassword"].ToString();
-                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-                client.EnableSsl = true;
-                client.Timeout = 100000;
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential(senderEmail, senderPassword);
-               
-
-                MailMessage mailMessage = new MailMessage(senderEmail, toEmail, subject, emailBody);
-                mailMessage.IsBodyHtml = true;
-                mailMessage.BodyEncoding = UTF8Encoding.UTF8;
-
-                client.Send(mailMessage);
-                return true;
-            }
-            catch(Exception ex)
-            {
-                return false;
-            }
+            return Redirect("~/index.aspx");
         }
      public ActionResult AcceptedOrders()
         {
