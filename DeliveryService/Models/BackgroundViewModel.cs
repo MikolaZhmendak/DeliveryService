@@ -45,7 +45,7 @@ namespace DeliveryService.Models
         [DataType(DataType.PhoneNumber), DisplayFormat(DataFormatString = "{0:(###)-###-####}", ApplyFormatInEditMode = true)]
         public long PhoneNumber { get; set; }
          
-        
+        public bool BackgroundComplete { get; set; }
       
     }
 }
