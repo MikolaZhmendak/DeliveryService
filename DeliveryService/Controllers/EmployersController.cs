@@ -15,57 +15,15 @@ namespace DeliveryService.Controllers
     public class EmployersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-    
-<<<<<<< HEAD
-=======
-        
-     public JsonResult SendMailToUser()
-        {
-            bool result = false;
-            result = SendEmail("zhmendakm@gmail.com", "Candidate Backgroundcheck Form", "<p>Hello Andy,<br /> I need to run a complete background check for the following candidate.<br/> First Name: If you have any questions please do not hesitate to contact us back. <br />  Regards Delivery Service Inc. </p>");
-
-
-            return Json(result, JsonRequestBehavior.AllowGet);
-        }
->>>>>>> 08eea61174789411d10062775d1b093b90c09d72
-
-       public  ActionResult Email()
-        {
-<<<<<<< HEAD
-            return Redirect("~/index.aspx");
-=======
-            try
-            {
-
-                string senderEmail = System.Configuration.ConfigurationManager.AppSettings["SenderEmail"].ToString();
-                string senderPassword = System.Configuration.ConfigurationManager.AppSettings["SenderPassword"].ToString();
-                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-                client.EnableSsl = true;
-                client.Timeout = 100000;
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential(senderEmail, senderPassword);
-               
-
-                MailMessage mailMessage = new MailMessage(senderEmail, toEmail, subject, emailBody);
-                mailMessage.IsBodyHtml = true;
-                mailMessage.BodyEncoding = UTF8Encoding.UTF8;
-
-                client.Send(mailMessage);
-
-                
-                return true;
-            }
-            catch(Exception ex)
-            {
-                return false;
-            }
->>>>>>> 08eea61174789411d10062775d1b093b90c09d72
-        }
      public ActionResult AcceptedOrders()
         {
             var completedOrders = db.OrderDriverView.Find();
             return View(completedOrders);
+        }
+
+        public ActionResult Email()
+        {
+            return Redirect("~/index.aspx");
         }
 
       public ActionResult Home()
