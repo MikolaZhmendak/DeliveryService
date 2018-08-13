@@ -17,8 +17,8 @@ namespace DeliveryService.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
      public ActionResult AcceptedOrders()
         {
-            var completedOrders = db.OrderDriverView.Find();
-            return View(completedOrders);
+           
+            return View();
         }
 
         public ActionResult Email()
@@ -34,6 +34,15 @@ namespace DeliveryService.Controllers
         public ActionResult Index()
         {
             return View(db.Employer.ToList());
+        }
+
+        public ActionResult OrderEmployerViews()
+        {
+            List<CustomerOrder> orderCheck = db.CustomerOrder.ToList();
+            CustomerOrderViewModel orderVM = new CustomerOrderViewModel();
+            List<CustomerOrderViewModel> orderListVM = orderCheck.Select(x => new CustomerOrderViewModel { FirstName = x.Customer.FirstName, LastName = x.Customer.LastName, PhoneNumber = x.Customer.PhoneNumber, RestaurantName = x.RestaurantName, ItemOrdered = x.ItemOrdered, Quantity = x.Quantity, Date_of_Order = x.Date_of_Order, CurbeSide = x.CurbeSide, WalkIn = x.WalkIn, Tips = x.Tips }).ToList();
+
+            return View(orderListVM);
         }
         public ActionResult DriversView()
         {

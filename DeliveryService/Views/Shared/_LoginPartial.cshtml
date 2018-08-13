@@ -26,7 +26,7 @@
             {
                 <li> @Html.ActionLink("Background", "Create", "Drivers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
                 <li> @Html.ActionLink("Customers", "Customer", "Drivers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
-                <li> @Html.ActionLink("Orders", "Index", "OrderDriverViews", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
+                <li> @Html.ActionLink("Orders","OrderDriverViews", "Drivers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
                 <li> @Html.ActionLink("Home", "DriverHome", "Drivers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
 
             }
@@ -34,7 +34,7 @@
             @if (User.IsInRole("Employer"))
             {
                 <li> @Html.ActionLink("Drivers", "DriversView", "Employers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
-                <li> @Html.ActionLink("Accepted Orders", "AcceptedOrders", "Employers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
+                <li> @Html.ActionLink("Accepted Orders", "OrderEmployerViews", "Employers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
 
             }
             <li>

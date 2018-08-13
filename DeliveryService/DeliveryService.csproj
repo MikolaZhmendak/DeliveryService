@@ -225,7 +225,6 @@
     <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\OrderDriverViewsController.cs" />
     <Compile Include="Controllers\usersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -253,6 +252,10 @@
     <Compile Include="Migrations\201807251805233_added new row.Designer.cs">
       <DependentUpon>201807251805233_added new row.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808131425357_delete table.cs" />
+    <Compile Include="Migrations\201808131425357_delete table.Designer.cs">
+      <DependentUpon>201808131425357_delete table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
@@ -260,12 +263,12 @@
     <Compile Include="Models\CreditCard.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerOrder.cs" />
+    <Compile Include="Models\CustomerOrderViewModel.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\Employer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MinimumAgeAttribute.cs" />
-    <Compile Include="Models\OrderDriverView.cs" />
     <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Models\StripeKeys.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -379,9 +382,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Drivers\BackgroundConfirmation.cshtml" />
-    <Content Include="Views\Employers\AcceptedOrders.cshtml" />
     <Content Include="Views\CustomerOrders\CurrentOrder.cshtml" />
     <Content Include="Views\CustomerOrders\PastOrders.cshtml" />
+    <Content Include="Views\Drivers\OrderDriverViews.cshtml" />
+    <Content Include="Views\Employers\OrderEmployerViews.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -409,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807251805233_added new row.resx">
       <DependentUpon>201807251805233_added new row.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808131425357_delete table.resx">
+      <DependentUpon>201808131425357_delete table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
