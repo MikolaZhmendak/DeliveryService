@@ -90,9 +90,12 @@ namespace DeliveryService.Controllers
         }
 
         // GET: CustomerOrders/Create
-        public ActionResult Create()
+        public ActionResult Create(int? customerId)
         {
-            return View();
+
+           CustomerOrder customerOrder = new CustomerOrder();
+            customerOrder.CustomerId = customerId;
+            return View(customerOrder);
         }
 
         // POST: CustomerOrders/Create

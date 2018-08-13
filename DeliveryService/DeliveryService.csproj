@@ -379,8 +379,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Drivers\BackgroundConfirmation.cshtml" />
-    <Content Include="Views\OrderDriverViews\Index.cshtml" />
-    <Content Include="Views\OrderDriverViews\Accept.cshtml" />
     <Content Include="Views\Employers\AcceptedOrders.cshtml" />
     <Content Include="Views\CustomerOrders\CurrentOrder.cshtml" />
     <Content Include="Views\CustomerOrders\PastOrders.cshtml" />
