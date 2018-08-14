@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -37,6 +38,10 @@ namespace DeliveryService.Models
         public DbSet<CreditCard> CreditCard { get; set; }
         public DbSet<Employer> Employer { get; set; }
         public DbSet<AccetpOrder> AccetpOrder { get; set; }
-      //  AIzaSyDAVUCRfT4tOXt1ThRoWc4SSPBgVUXkUP4
+        public DbSet<FinishOrder> FinishOrder { get; set; }
+        public IEnumerable ApplicationUsers { get; internal set; }
+
+        public System.Data.Entity.DbSet<DeliveryService.Models.CustomerOrderViewModel> CustomerOrderViewModels { get; set; }
+        //  AIzaSyDAVUCRfT4tOXt1ThRoWc4SSPBgVUXkUP4
     }
 }

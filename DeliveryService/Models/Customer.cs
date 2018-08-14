@@ -44,9 +44,8 @@ namespace DeliveryService.Models
         [DisplayFormat(DataFormatString = "{0: ###-####-####}")]
         public long PhoneNumber { get; set; }
 
-        [ForeignKey("User")]
-        public string UserId { get; set; }
-        public ApplicationUser User { get; set; }
+        public virtual ICollection<Customer> Customers { get; set; }
+
 
     }
 }

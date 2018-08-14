@@ -7,13 +7,13 @@ namespace DeliveryService.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class newtable1 : IMigrationMetadata
+    public sealed partial class finishordertable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(newtable1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(finishordertable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808132016550_new table1"; }
+            get { return "201808142038329_finish order table"; }
         }
         
         string IMigrationMetadata.Source

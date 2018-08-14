@@ -7,13 +7,13 @@ namespace DeliveryService.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class changedtimeoftheday : IMigrationMetadata
+    public sealed partial class othertable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(changedtimeoftheday));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(othertable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201807202324543_changed time of the day"; }
+            get { return "201808142027284_other table"; }
         }
         
         string IMigrationMetadata.Source

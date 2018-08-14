@@ -13,6 +13,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.RestaurantName)
         </th>
         <th>
@@ -39,6 +42,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.Customer.FirstName)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.RestaurantName)
         </td>
         <td>
@@ -63,34 +69,8 @@
             @Html.ActionLink("Edit", "Edit", new { id=item.OrderId }) |
             @Html.ActionLink("Details", "Details", new { id=item.OrderId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.OrderId })
-            
         </td>
     </tr>
 }
 
-
 </table>
-
-
-<div class="row">
-    <div class="col-md-2">
-       
-    
-</div>
-
-    
-   
-        <div class="col-md-8 text-center">
-            <h2>Complete you order</h2>
-            <p>
-
-            </p>
-
-
-            @Html.ActionLink("Payment", "Payment", "CustomerOrders", new { area = "" }, new { @class = "btn btn-primary btn-md" })
-        </div>
-    
-
-    <div class="col-md-2">
-    </div>
-</div>

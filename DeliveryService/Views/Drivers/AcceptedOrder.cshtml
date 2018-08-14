@@ -1,11 +1,13 @@
 ﻿@model IEnumerable<DeliveryService.Models.CustomerOrderViewModel>
 
 @{
-    ViewBag.Title = "OrderDriverViews";
+    ViewBag.Title = "AcceptedOrder";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>OrderDriverViews</h2>
+<h2>AcceptedOrder</h2>
+
+
 
 <br />
 <br />
@@ -44,7 +46,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Tips)
             </th>
-          
+
 
 
 
@@ -85,13 +87,16 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Tips)
                 </td>
-               
+
 
 
 
 
                 <td>
-                    <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Create", "AccetpOrders")'">Accept</button>
+                    <button type="button" class="btn btn-primary disabled" onclick="location.href='@Url.Action("Create", "AccetpOrders")'">Accept</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Create", "FinishOrders")'">Finish</button>
                 </td>
             </tr>
 
@@ -111,6 +116,4 @@
 
 
 </div>
-
-
 

@@ -7,7 +7,6 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DeliveryService.Models;
-using Microsoft.AspNet.Identity;
 
 namespace DeliveryService.Controllers
 {
@@ -15,15 +14,17 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-       
+
         public ActionResult CustomerHome()
         {
             return View();
         }
+
         public ActionResult Search()
         {
             return View(db.Restaurant.ToList());
         }
+
 
         public JsonResult GetSearchingData(string SearchBy, string SearchValue)
         {
@@ -47,16 +48,11 @@ namespace DeliveryService.Controllers
                 RestaurantList = db.Restaurant.Where(x => x.Name.Contains(SearchValue) || SearchValue == null).ToList();
                 return Json(RestaurantList, JsonRequestBehavior.AllowGet);
             }
-         }
+        }
 
-        
-
-       
         // GET: Customers
         public ActionResult Index()
         {
-            var currentUserId = User.Identity.GetUserId();
-            var customer = db.Customer.Where(x => x.UserId == currentUserId).ToList();
             return View(db.Customer.ToList());
         }
 
@@ -90,20 +86,12 @@ namespace DeliveryService.Controllers
         {
             if (ModelState.IsValid)
             {
-
-                customer.UserId = User.Identity.GetUserId();
                 db.Customer.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("NewCustomer");
+                return RedirectToAction("Index");
             }
 
             return View(customer);
-        }
-
-
-        public ActionResult NewCustomer()
-        {
-            return View();
         }
 
         // GET: Customers/Edit/5

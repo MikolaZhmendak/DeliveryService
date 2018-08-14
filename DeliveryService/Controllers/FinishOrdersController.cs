@@ -10,107 +10,107 @@ using DeliveryService.Models;
 
 namespace DeliveryService.Controllers
 {
-    public class AccetpOrdersController : Controller
+    public class FinishOrdersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: AccetpOrders
+        // GET: FinishOrders
         public ActionResult Index()
         {
-            return View(db.AccetpOrder.ToList());
+            return View(db.FinishOrder.ToList());
         }
 
-        // GET: AccetpOrders/Details/5
+        // GET: FinishOrders/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AccetpOrder accetpOrder = db.AccetpOrder.Find(id);
-            if (accetpOrder == null)
+            FinishOrder finishOrder = db.FinishOrder.Find(id);
+            if (finishOrder == null)
             {
                 return HttpNotFound();
             }
-            return View(accetpOrder);
+            return View(finishOrder);
         }
 
-        // GET: AccetpOrders/Create
+        // GET: FinishOrders/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: AccetpOrders/Create
+        // POST: FinishOrders/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AccetpOrderId,Yes,No")] AccetpOrder accetpOrder)
+        public ActionResult Create([Bind(Include = "FinishOrderId,Yes")] FinishOrder finishOrder)
         {
             if (ModelState.IsValid)
             {
-                db.AccetpOrder.Add(accetpOrder);
+                db.FinishOrder.Add(finishOrder);
                 db.SaveChanges();
-                return RedirectToAction("AcceptedOrder", "Drivers");
+                return RedirectToAction("DriverHome", "Drivers");
             }
 
-            return View(accetpOrder);
+            return View(finishOrder);
         }
 
-        // GET: AccetpOrders/Edit/5
+        // GET: FinishOrders/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AccetpOrder accetpOrder = db.AccetpOrder.Find(id);
-            if (accetpOrder == null)
+            FinishOrder finishOrder = db.FinishOrder.Find(id);
+            if (finishOrder == null)
             {
                 return HttpNotFound();
             }
-            return View(accetpOrder);
+            return View(finishOrder);
         }
 
-        // POST: AccetpOrders/Edit/5
+        // POST: FinishOrders/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AccetpOrderId,Yes,No")] AccetpOrder accetpOrder)
+        public ActionResult Edit([Bind(Include = "FinishOrderId,Yes")] FinishOrder finishOrder)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(accetpOrder).State = EntityState.Modified;
+                db.Entry(finishOrder).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(accetpOrder);
+            return View(finishOrder);
         }
 
-        // GET: AccetpOrders/Delete/5
+        // GET: FinishOrders/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AccetpOrder accetpOrder = db.AccetpOrder.Find(id);
-            if (accetpOrder == null)
+            FinishOrder finishOrder = db.FinishOrder.Find(id);
+            if (finishOrder == null)
             {
                 return HttpNotFound();
             }
-            return View(accetpOrder);
+            return View(finishOrder);
         }
 
-        // POST: AccetpOrders/Delete/5
+        // POST: FinishOrders/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            AccetpOrder accetpOrder = db.AccetpOrder.Find(id);
-            db.AccetpOrder.Remove(accetpOrder);
+            FinishOrder finishOrder = db.FinishOrder.Find(id);
+            db.FinishOrder.Remove(finishOrder);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

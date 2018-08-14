@@ -223,6 +223,7 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\DriversController.cs" />
     <Compile Include="Controllers\EmployersController.cs" />
+    <Compile Include="Controllers\FinishOrdersController.cs" />
     <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -237,29 +238,17 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807190155324_added attribute 2.cs" />
-    <Compile Include="Migrations\201807190155324_added attribute 2.Designer.cs">
-      <DependentUpon>201807190155324_added attribute 2.cs</DependentUpon>
+    <Compile Include="Migrations\201808141937412_new property1.cs" />
+    <Compile Include="Migrations\201808141937412_new property1.Designer.cs">
+      <DependentUpon>201808141937412_new property1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807202324543_changed time of the day.cs" />
-    <Compile Include="Migrations\201807202324543_changed time of the day.Designer.cs">
-      <DependentUpon>201807202324543_changed time of the day.cs</DependentUpon>
+    <Compile Include="Migrations\201808142027284_other table.cs" />
+    <Compile Include="Migrations\201808142027284_other table.Designer.cs">
+      <DependentUpon>201808142027284_other table.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807241910477_deleted row in table.cs" />
-    <Compile Include="Migrations\201807241910477_deleted row in table.Designer.cs">
-      <DependentUpon>201807241910477_deleted row in table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807251805233_added new row.cs" />
-    <Compile Include="Migrations\201807251805233_added new row.Designer.cs">
-      <DependentUpon>201807251805233_added new row.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808131425357_delete table.cs" />
-    <Compile Include="Migrations\201808131425357_delete table.Designer.cs">
-      <DependentUpon>201808131425357_delete table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808132016550_new table1.cs" />
-    <Compile Include="Migrations\201808132016550_new table1.Designer.cs">
-      <DependentUpon>201808132016550_new table1.cs</DependentUpon>
+    <Compile Include="Migrations\201808142038329_finish order table.cs" />
+    <Compile Include="Migrations\201808142038329_finish order table.Designer.cs">
+      <DependentUpon>201808142038329_finish order table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccetpOrder.cs" />
@@ -272,6 +261,7 @@
     <Compile Include="Models\CustomerOrderViewModel.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\Employer.cs" />
+    <Compile Include="Models\FinishOrder.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MinimumAgeAttribute.cs" />
@@ -397,6 +387,12 @@
     <Content Include="Views\AccetpOrders\Details.cshtml" />
     <Content Include="Views\AccetpOrders\Edit.cshtml" />
     <Content Include="Views\AccetpOrders\Index.cshtml" />
+    <Content Include="Views\Drivers\AcceptedOrder.cshtml" />
+    <Content Include="Views\FinishOrders\Create.cshtml" />
+    <Content Include="Views\FinishOrders\Delete.cshtml" />
+    <Content Include="Views\FinishOrders\Details.cshtml" />
+    <Content Include="Views\FinishOrders\Edit.cshtml" />
+    <Content Include="Views\FinishOrders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -413,23 +409,14 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807190155324_added attribute 2.resx">
-      <DependentUpon>201807190155324_added attribute 2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808141937412_new property1.resx">
+      <DependentUpon>201808141937412_new property1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807202324543_changed time of the day.resx">
-      <DependentUpon>201807202324543_changed time of the day.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808142027284_other table.resx">
+      <DependentUpon>201808142027284_other table.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807241910477_deleted row in table.resx">
-      <DependentUpon>201807241910477_deleted row in table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807251805233_added new row.resx">
-      <DependentUpon>201807251805233_added new row.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808131425357_delete table.resx">
-      <DependentUpon>201808131425357_delete table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808132016550_new table1.resx">
-      <DependentUpon>201808132016550_new table1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808142038329_finish order table.resx">
+      <DependentUpon>201808142038329_finish order table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

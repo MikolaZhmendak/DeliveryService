@@ -8,15 +8,14 @@ using System.Web;
 using System.Web.Mvc;
 using DeliveryService.Models;
 using System.Configuration;
-using Microsoft.AspNet.Identity;
 using Stripe;
-
 
 namespace DeliveryService.Controllers
 {
     public class CustomerOrdersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+
 
         public ActionResult CurrentOrder()
         {
@@ -27,8 +26,9 @@ namespace DeliveryService.Controllers
         public ActionResult PastOrders()
         {
             var pastOrder = db.CustomerOrder.Where(x => x.Date_of_Order < DateTime.Now);
-                return View(pastOrder);
+            return View(pastOrder);
         }
+
         public ActionResult Stripe()
         {
             var PublishableKey = ConfigurationManager.AppSettings["pk_test_c1nYrefZZ9bdIDYx1qebUDkW"];
@@ -36,6 +36,12 @@ namespace DeliveryService.Controllers
 
             return View();
         }
+
+        public ActionResult Payment()
+        {
+            return View();
+        }
+
 
         public ActionResult Charge(string stripeEmail, string stripeToken)
         {
@@ -55,26 +61,20 @@ namespace DeliveryService.Controllers
                 Amount = 800,
                 Description = "Item Charge",
                 Currency = "usd",
-            CustomerId = customer.Id
+                CustomerId = customer.Id
 
             });
 
-        return View();
-    }
-        public ActionResult Payment()
-        {
             return View();
         }
+
 
         // GET: CustomerOrders
         public ActionResult Index()
         {
-            var currentOrder = db.CustomerOrder.Where(x => x.Date_of_Order >= DateTime.Today).Include(s => s.Customer);
-            
-            return View(currentOrder.ToList());
+            var customerOrder = db.CustomerOrder.Where(x => x.Date_of_Order >= DateTime.Today).Include(s => s.Customer);
+            return View(customerOrder.ToList());
         }
-
-       
 
         // GET: CustomerOrders/Details/5
         public ActionResult Details(int? id)
@@ -111,6 +111,7 @@ namespace DeliveryService.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
             ViewBag.CustomerId = new SelectList(db.Customer, "CustomerId", "FirstName", customerOrder.CustomerId);
             return View(customerOrder);
         }
@@ -127,6 +128,7 @@ namespace DeliveryService.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.CustomerId = new SelectList(db.Customer, "CustomerId", "FirstName", customerOrder.CustomerId);
             return View(customerOrder);
         }
 
@@ -135,7 +137,7 @@ namespace DeliveryService.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OrderId,RestaurantName,ItemOrdered,Quantity,Date_of_Order,CurbeSide,WalkIn,Tips")] CustomerOrder customerOrder)
+        public ActionResult Edit([Bind(Include = "OrderId,CustomerId,RestaurantName,ItemOrdered,Quantity,Date_of_Order,CurbeSide,WalkIn,Tips")] CustomerOrder customerOrder)
         {
             if (ModelState.IsValid)
             {
@@ -143,6 +145,7 @@ namespace DeliveryService.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.CustomerId = new SelectList(db.Customer, "CustomerId", "FirstName", customerOrder.CustomerId);
             return View(customerOrder);
         }
 
