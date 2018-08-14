@@ -1,0 +1,51 @@
+﻿@model DeliveryService.Models.AcceptedOrder
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AcceptedOrder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerOrder.RestaurantName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerOrder.RestaurantName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.No)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AcceptedOrderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

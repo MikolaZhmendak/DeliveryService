@@ -14,6 +14,8 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+
+       
         public ActionResult OrderDriverViews()
         {
             List<CustomerOrder> orderCheck = db.CustomerOrder.Where(x => x.Date_of_Order >= DateTime.Today).ToList();

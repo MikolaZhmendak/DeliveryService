@@ -36,6 +36,7 @@ namespace DeliveryService.Models
         public DbSet<Restaurant> Restaurant { get; set; }
         public DbSet<CreditCard> CreditCard { get; set; }
         public DbSet<Employer> Employer { get; set; }
+        public DbSet<AccetpOrder> AccetpOrder { get; set; }
       //  AIzaSyDAVUCRfT4tOXt1ThRoWc4SSPBgVUXkUP4
     }
 }

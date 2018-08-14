@@ -69,7 +69,8 @@ namespace DeliveryService.Controllers
         // GET: CustomerOrders
         public ActionResult Index()
         {
-            return View(db.CustomerOrder.ToList());
+            var currentOrder = db.CustomerOrder.Where(x => x.Date_of_Order >= DateTime.Today);
+            return View(currentOrder);
         }
 
        

@@ -91,7 +91,7 @@
 
 
                 <td>
-                    @Html.ActionLink("Accept this order", "", new { id = item.CustomerId})
+                    <button type="button" onclick="location.href='@Url.Action("Create", "AccetpOrders")'">Accept</button>
                 </td>
             </tr>
 

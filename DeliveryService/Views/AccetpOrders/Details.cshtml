@@ -1,0 +1,35 @@
+﻿@model DeliveryService.Models.AccetpOrder
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AccetpOrder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Yes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.No)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AccetpOrderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

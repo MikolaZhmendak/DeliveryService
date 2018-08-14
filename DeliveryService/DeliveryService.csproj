@@ -216,6 +216,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccetpOrdersController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CreditCardsController.cs" />
     <Compile Include="Controllers\CustomerOrdersController.cs" />
@@ -256,7 +257,12 @@
     <Compile Include="Migrations\201808131425357_delete table.Designer.cs">
       <DependentUpon>201808131425357_delete table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808132016550_new table1.cs" />
+    <Compile Include="Migrations\201808132016550_new table1.Designer.cs">
+      <DependentUpon>201808132016550_new table1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccetpOrder.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BackgroundCheck.cs" />
     <Compile Include="Models\BackgroundViewModel.cs" />
@@ -386,6 +392,11 @@
     <Content Include="Views\CustomerOrders\PastOrders.cshtml" />
     <Content Include="Views\Drivers\OrderDriverViews.cshtml" />
     <Content Include="Views\Employers\OrderEmployerViews.cshtml" />
+    <Content Include="Views\AccetpOrders\Create.cshtml" />
+    <Content Include="Views\AccetpOrders\Delete.cshtml" />
+    <Content Include="Views\AccetpOrders\Details.cshtml" />
+    <Content Include="Views\AccetpOrders\Edit.cshtml" />
+    <Content Include="Views\AccetpOrders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -416,6 +427,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808131425357_delete table.resx">
       <DependentUpon>201808131425357_delete table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808132016550_new table1.resx">
+      <DependentUpon>201808132016550_new table1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
