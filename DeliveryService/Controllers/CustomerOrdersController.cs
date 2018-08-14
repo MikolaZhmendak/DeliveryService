@@ -69,8 +69,9 @@ namespace DeliveryService.Controllers
         // GET: CustomerOrders
         public ActionResult Index()
         {
-            var currentOrder = db.CustomerOrder.Where(x => x.Date_of_Order >= DateTime.Today);
-            return View(currentOrder);
+            var currentOrder = db.CustomerOrder.Where(x => x.Date_of_Order >= DateTime.Today).Include(s => s.Customer);
+            
+            return View(currentOrder.ToList());
         }
 
        
@@ -91,12 +92,10 @@ namespace DeliveryService.Controllers
         }
 
         // GET: CustomerOrders/Create
-        public ActionResult Create(int? customerId)
+        public ActionResult Create()
         {
-
-           CustomerOrder customerOrder = new CustomerOrder();
-            customerOrder.CustomerId = customerId;
-            return View(customerOrder);
+            ViewBag.CustomerId = new SelectList(db.Customer, "CustomerId", "FirstName");
+            return View();
         }
 
         // POST: CustomerOrders/Create
@@ -112,7 +111,7 @@ namespace DeliveryService.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.CustomerId = new SelectList(db.Customer, "CustomerId", "FirstName", customerOrder.CustomerId);
             return View(customerOrder);
         }
 
