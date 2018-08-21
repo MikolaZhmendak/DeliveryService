@@ -30,7 +30,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Order History<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>@Html.ActionLink("New Orders", "OrderDriverViews", "Drivers")</li> @*View classes/ button to create*@
-                        <li>@Html.ActionLink("Finish Orders", "PastOrders", "Drivers")</li>
+                        <li>@Html.ActionLink("Finish Orders", "FinishedOrders", "Drivers")</li>
                     </ul>
                 </li>
                 <li> @Html.ActionLink("Home", "DriverHome", "Drivers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
@@ -40,7 +40,7 @@
             @if (User.IsInRole("Employer"))
             {
                 <li> @Html.ActionLink("Drivers", "DriversView", "Employers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
-                <li> @Html.ActionLink("Accepted Orders", "OrderEmployerViews", "Employers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
+                <li> @Html.ActionLink("Finished Orders", "FinishedOrder", "Employers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
 
             }
             <li>

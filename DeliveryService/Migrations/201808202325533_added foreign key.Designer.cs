@@ -7,13 +7,13 @@ namespace DeliveryService.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class finishordertable : IMigrationMetadata
+    public sealed partial class addedforeignkey : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(finishordertable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedforeignkey));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808142038329_finish order table"; }
+            get { return "201808202325533_added foreign key"; }
         }
         
         string IMigrationMetadata.Source

@@ -17,6 +17,9 @@ namespace DeliveryService.Models
         [ForeignKey("CustomerId")]
         public virtual Customer Customer { get; set; }
 
+      
+
+
         [Required(ErrorMessage = " First Name is required")]
         [StringLength(50)]
         [Display(Name = "First Name")]
@@ -43,6 +46,7 @@ namespace DeliveryService.Models
         public bool WalkIn { get; set; }
 
         public int Tips { get; set; }
+
 
     }
 }

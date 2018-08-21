@@ -1,0 +1,58 @@
+﻿@model IEnumerable<DeliveryService.Models.FinishOrder>
+
+@{
+    ViewBag.Title = "FinishedOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>FinishedOrders</h2>
+
+<br />
+<br />
+<link href="~/Content/bootstrap-myversion.css" rel="stylesheet" />
+
+<div class="container" style="width:120%; margin-top:2%">
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerOrder)
+            </th>
+          
+
+
+
+
+            <th></th>
+        </tr>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerOrder)
+                </td>
+                
+
+
+
+
+
+            </tr>
+
+
+
+
+
+
+
+        }
+
+    </table>
+
+
+
+
+
+
+</div>

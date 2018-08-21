@@ -109,7 +109,7 @@ namespace DeliveryService.Controllers
             {
                 db.CustomerOrder.Add(customerOrder);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Payment");
             }
 
             ViewBag.CustomerId = new SelectList(db.Customer, "CustomerId", "FirstName", customerOrder.CustomerId);

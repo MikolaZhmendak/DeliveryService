@@ -7,13 +7,13 @@ namespace DeliveryService.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class othertable : IMigrationMetadata
+    public sealed partial class addedforeignkey1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(othertable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedforeignkey1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808142027284_other table"; }
+            get { return "201808210037045_added foreign key1"; }
         }
         
         string IMigrationMetadata.Source

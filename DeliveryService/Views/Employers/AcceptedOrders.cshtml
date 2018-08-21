@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DeliveryService.Models.FinishOrder>
+
+@{
+    ViewBag.Title = "AcceptedOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AcceptedOrders</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </th>
+
+        <td>
+            @Html.DisplayNameFor(model => model.Customer.LastName)
+        </td>
+       
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.FirstName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.LastName)
+            </td>
+           
+        
+        </tr>
+    }
+
+</table>
+

@@ -238,17 +238,13 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808141937412_new property1.cs" />
-    <Compile Include="Migrations\201808141937412_new property1.Designer.cs">
-      <DependentUpon>201808141937412_new property1.cs</DependentUpon>
+    <Compile Include="Migrations\201808202325533_added foreign key.cs" />
+    <Compile Include="Migrations\201808202325533_added foreign key.Designer.cs">
+      <DependentUpon>201808202325533_added foreign key.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808142027284_other table.cs" />
-    <Compile Include="Migrations\201808142027284_other table.Designer.cs">
-      <DependentUpon>201808142027284_other table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808142038329_finish order table.cs" />
-    <Compile Include="Migrations\201808142038329_finish order table.Designer.cs">
-      <DependentUpon>201808142038329_finish order table.cs</DependentUpon>
+    <Compile Include="Migrations\201808210037045_added foreign key1.cs" />
+    <Compile Include="Migrations\201808210037045_added foreign key1.Designer.cs">
+      <DependentUpon>201808210037045_added foreign key1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccetpOrder.cs" />
@@ -382,17 +378,16 @@
     <Content Include="Views\CustomerOrders\PastOrders.cshtml" />
     <Content Include="Views\Drivers\OrderDriverViews.cshtml" />
     <Content Include="Views\Employers\OrderEmployerViews.cshtml" />
-    <Content Include="Views\AccetpOrders\Create.cshtml" />
-    <Content Include="Views\AccetpOrders\Delete.cshtml" />
-    <Content Include="Views\AccetpOrders\Details.cshtml" />
-    <Content Include="Views\AccetpOrders\Edit.cshtml" />
-    <Content Include="Views\AccetpOrders\Index.cshtml" />
     <Content Include="Views\Drivers\AcceptedOrder.cshtml" />
+    <Content Include="Views\Drivers\FinishedOrders.cshtml" />
     <Content Include="Views\FinishOrders\Create.cshtml" />
     <Content Include="Views\FinishOrders\Delete.cshtml" />
     <Content Include="Views\FinishOrders\Details.cshtml" />
     <Content Include="Views\FinishOrders\Edit.cshtml" />
     <Content Include="Views\FinishOrders\Index.cshtml" />
+    <Content Include="Views\Employers\AcceptedOrders.cshtml" />
+    <Content Include="Views\Employers\FinishedOrder.cshtml" />
+    <Content Include="Views\AccetpOrders\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -409,14 +404,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808141937412_new property1.resx">
-      <DependentUpon>201808141937412_new property1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808202325533_added foreign key.resx">
+      <DependentUpon>201808202325533_added foreign key.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808142027284_other table.resx">
-      <DependentUpon>201808142027284_other table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808142038329_finish order table.resx">
-      <DependentUpon>201808142038329_finish order table.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808210037045_added foreign key1.resx">
+      <DependentUpon>201808210037045_added foreign key1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
