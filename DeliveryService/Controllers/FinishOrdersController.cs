@@ -54,7 +54,7 @@ namespace DeliveryService.Controllers
             {
                 db.FinishOrder.Add(finishOrder);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("DriverHome", "Drivers");
             }
 
             ViewBag.CustomerId = new SelectList(db.Customer, "CustomerId", "FirstName", finishOrder.CustomerId);
