@@ -272,6 +272,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\83436499-vector-conceptual-food-delivery-logo-design-motorcycle-driver-carrying-plate-of-food %281%29.jpg" />
     <Content Include="Content\Images\green-dollar-sign-image-many-30555081%281%29.jpg" />
+    <Content Include="Content\Images\grid.png" />
     <Content Include="Content\Images\jokes-for-roasting-your-boss-funny-jokes-pinterest-funny-memes.jpg" />
     <Content Include="Content\Images\kisspng-knife-fork-spoon-plate-clip-art-fork-png-pic-5a782dbd363f77.5024601215178254692222.jpg" />
     <Content Include="Content\Images\oldlock.jpg" />
@@ -299,6 +300,10 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="smartlogin\css\style.css" />
+    <Content Include="smartlogin\images\bg.jpg" />
+    <Content Include="smartlogin\index.html" />
+    <Content Include="smartlogin\w3layouts-License.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -388,6 +393,7 @@
     <Content Include="Views\Employers\AcceptedOrders.cshtml" />
     <Content Include="Views\Employers\FinishedOrder.cshtml" />
     <Content Include="Views\AccetpOrders\Create.cshtml" />
+    <Content Include="Views\Account\SmartLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
