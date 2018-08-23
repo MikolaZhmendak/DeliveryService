@@ -7,7 +7,7 @@ using System.IO;
 using System.Web.UI.WebControls;
 using System.Net.Mail;
 using System.Net;
-
+using System.Drawing;
 
 namespace DeliveryService
 {
@@ -22,10 +22,14 @@ namespace DeliveryService
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            Button2.Style.Add("background-color", "red");
+
         }
 
         protected void send_Click(object sender, EventArgs e)
         {
+            send.Style.Add("background-color", "red");
+
             try
             {
 

@@ -33,7 +33,7 @@ h2 {
     border: 2px solid black;
 }
 
-.table, td, tr, th, thead, tbody {
+.table, td, tr, th {
     background-color: cyan;
     border: 2px solid black;
 }
@@ -47,4 +47,11 @@ h2 {
        position:center;
    }
 
-
+   .form1{
+       background-color:aquamarine;
+   }
+   .header{
+      
+       
+       
+   }

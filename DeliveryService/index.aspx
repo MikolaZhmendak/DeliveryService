@@ -4,10 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Send an e-mail</title>
+
+    <link href="Content/Site.css" type="text/css" rel="stylesheet"/>
+
 </head>
 <body>
-    <form id="form1" runat="server">
+
+    <header ><center><b><h1>Send e-mail</h1></b></center></header>
+    <form
+        id="form1"
+        runat="server"
+        
+        >
         <br /><br /><br /><br />
    <table align="center" width ="60%">
        <tr>
@@ -48,7 +57,7 @@
         <tr>
            <td></td>
            <td>
-                <asp:Button ID="send" OnClick="send_Click" runat="server" Text="Send"></asp:Button>
+                <asp:Button ID="send" OnClick="send_Click" runat="server" Text="Send" class="btn btn-success"></asp:Button>
                </td>
        </tr>
        <tr>
@@ -58,12 +67,11 @@
            </td>
        </tr>
        
-
-         <asp:Button ID="home" OnClick="Home" runat="server" Text="Home Page"></asp:Button> 
+       <asp:Button ID="Button2" OnClick="Home" runat="server" align ="center" Text="Home Page"></asp:Button> 
 
    </table>
     </form>
 
-    
+     
 </body>
 </html>
