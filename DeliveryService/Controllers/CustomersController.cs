@@ -14,7 +14,11 @@ namespace DeliveryService.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-
+        public ActionResult NewCustomer()
+        {
+            return View();
+        }
+         
         public ActionResult CustomerHome()
         {
             return View();
@@ -88,7 +92,7 @@ namespace DeliveryService.Controllers
             {
                 db.Customer.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("NewCustomer");
             }
 
             return View(customer);

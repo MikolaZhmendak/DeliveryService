@@ -19,7 +19,7 @@ namespace DeliveryService.Controllers
 
         public ActionResult CurrentOrder()
         {
-            var currentOrder = db.CustomerOrder.Where(x => x.Date_of_Order >= DateTime.Today);
+            var currentOrder = db.CustomerOrder.Where(x => x.Date_of_Order >= DateTime.Now);
             return View(currentOrder);
         }
 
