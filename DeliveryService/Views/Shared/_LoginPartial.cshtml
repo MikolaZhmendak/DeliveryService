@@ -40,7 +40,13 @@
             @if (User.IsInRole("Employer"))
             {
                 <li> @Html.ActionLink("Drivers", "DriversView", "Employers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
-                <li> @Html.ActionLink("Finished Orders", "FinishedOrder", "Employers", routeValues: null, htmlAttributes: new { id = "home", @class = "nav-link" })</li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Orders<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>@Html.ActionLink("Finished Orders", "FinishedOrder","Employers")</li> @*View classes/ button to create*@
+                        <li>@Html.ActionLink("Cost Approved Orders", "TransactionApprovedOrders" ,"Employers")</li>
+                    </ul>
+                </li>
 
             }
             <li>

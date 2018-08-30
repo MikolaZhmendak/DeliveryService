@@ -50,8 +50,12 @@ h2 {
    .form1{
        background-color:aquamarine;
    }
-   .header{
+   
+
+   .btn-lg btn-outline-primary {
+       position:center;
+   }
       
        
        
-   }
+   

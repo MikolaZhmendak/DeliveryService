@@ -1,0 +1,34 @@
+﻿@model IEnumerable <DeliveryService.Models.Transaction>
+
+@{
+    ViewBag.Title = "Transaction";
+}
+
+<h2>Transaction List</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Month)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Transaction_Cost)
+        </th>
+
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Month)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transaction_Cost)
+            </td>
+
+        </tr>
+    }
+
+</table>

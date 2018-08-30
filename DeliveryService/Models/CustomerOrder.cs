@@ -17,6 +17,10 @@ namespace DeliveryService.Models
         [ForeignKey("CustomerId")]
         public virtual Customer Customer { get; set; }
 
+        public int? FinishOrderId { get; set; }
+        [ForeignKey("FinishOrderId")]
+        public virtual FinishOrder FinishedOrder { get; set; }
+
 
         public string RestaurantName { get; set; }
         public string ItemOrdered { get; set; }
@@ -31,6 +35,7 @@ namespace DeliveryService.Models
         public bool WalkIn {get; set;}
 
         public int Tips { get; set; }
+        
 
     }
 }

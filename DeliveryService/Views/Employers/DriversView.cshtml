@@ -6,6 +6,7 @@
 }
 <br />
 <br />
+<br />
     <table class="table">
     <tr>
         <th>
@@ -41,7 +42,7 @@
         <th>
             @Html.DisplayNameFor(model => model.DrivingLicence)
         </th>
-       
+       <th></th>
 
 
            
@@ -88,9 +89,11 @@
              
 
           
+            
             <td>
-                @Html.ActionLink("E-mail this form", "Email", new { id = item.BackgroundId })
+                <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Email", "Employers")'">E-mail this form</button>
             </td>
+            
             </tr>
             
                

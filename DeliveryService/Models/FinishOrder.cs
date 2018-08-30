@@ -16,10 +16,6 @@ namespace DeliveryService.Models
         [ForeignKey("CustomerId")]
         public virtual Customer Customer { get; set; }
 
-      
-        public int? OrderId { get; set; }
-        [ForeignKey("OrderId")]
-        public virtual CustomerOrder CustomerOrder { get; set; }
 
         public bool Yes { get; set; }
     }

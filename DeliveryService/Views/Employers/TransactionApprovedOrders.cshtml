@@ -1,20 +1,16 @@
-﻿@model IEnumerable<DeliveryService.Models.CustomerOrderViewModel>
+﻿@model IEnumerable <DeliveryService.Models.CustomerOrderViewModel>
 
 @{
-    ViewBag.Title = "FinishedOrders";
+    ViewBag.Title = "TransactionApprovedOrders";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Finished Orders</h2>
-
+<h2>Transaction Approved Orders</h2>
 <br />
 <br />
-<br/>
+<br />
 
-
-
-    
-<table class="table table">
+<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.FirstName)
@@ -46,7 +42,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Tips)
         </th>
-
+       
 
 
 
@@ -87,20 +83,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Tips)
             </td>
-
-
-
-
-
         </tr>
-
-
-
-
-
-
-
+    
     }
-
 </table>
-

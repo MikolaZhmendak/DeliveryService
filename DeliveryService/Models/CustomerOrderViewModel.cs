@@ -47,6 +47,6 @@ namespace DeliveryService.Models
 
         public int Tips { get; set; }
 
-
+       
     }
 }

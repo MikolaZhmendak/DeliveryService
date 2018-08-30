@@ -7,13 +7,13 @@ namespace DeliveryService.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addedforeignkey : IMigrationMetadata
+    public sealed partial class initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedforeignkey));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808202325533_added foreign key"; }
+            get { return "201808300000536_initial"; }
         }
         
         string IMigrationMetadata.Source

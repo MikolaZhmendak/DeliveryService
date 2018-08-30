@@ -39,6 +39,7 @@ namespace DeliveryService.Models
         public DbSet<Employer> Employer { get; set; }
         public DbSet<AccetpOrder> AccetpOrder { get; set; }
         public DbSet<FinishOrder> FinishOrder { get; set; }
+        public DbSet<Transaction> Transaction { get; set; }
         public IEnumerable ApplicationUsers { get; internal set; }
 
         public System.Data.Entity.DbSet<DeliveryService.Models.CustomerOrderViewModel> CustomerOrderViewModels { get; set; }

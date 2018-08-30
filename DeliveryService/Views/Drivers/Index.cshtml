@@ -7,9 +7,7 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -41,11 +39,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.ZipCode)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DriverId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DriverId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DriverId })
-        </td>
+       
     </tr>
 }
 

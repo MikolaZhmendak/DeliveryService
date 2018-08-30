@@ -238,13 +238,9 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808202325533_added foreign key.cs" />
-    <Compile Include="Migrations\201808202325533_added foreign key.Designer.cs">
-      <DependentUpon>201808202325533_added foreign key.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808210037045_added foreign key1.cs" />
-    <Compile Include="Migrations\201808210037045_added foreign key1.Designer.cs">
-      <DependentUpon>201808210037045_added foreign key1.cs</DependentUpon>
+    <Compile Include="Migrations\201808300000536_initial.cs" />
+    <Compile Include="Migrations\201808300000536_initial.Designer.cs">
+      <DependentUpon>201808300000536_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccetpOrder.cs" />
@@ -263,6 +259,7 @@
     <Compile Include="Models\MinimumAgeAttribute.cs" />
     <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Models\StripeKeys.cs" />
+    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -394,6 +391,10 @@
     <Content Include="Views\Employers\FinishedOrder.cshtml" />
     <Content Include="Views\AccetpOrders\Create.cshtml" />
     <Content Include="Views\Account\SmartLogin.cshtml" />
+    <Content Include="Views\Employers\DeliveryCost.cshtml" />
+    <Content Include="Views\Employers\Cost.cshtml" />
+    <Content Include="Views\Employers\Transaction.cshtml" />
+    <Content Include="Views\Employers\TransactionApprovedOrders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -410,11 +411,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808202325533_added foreign key.resx">
-      <DependentUpon>201808202325533_added foreign key.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808210037045_added foreign key1.resx">
-      <DependentUpon>201808210037045_added foreign key1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808300000536_initial.resx">
+      <DependentUpon>201808300000536_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
