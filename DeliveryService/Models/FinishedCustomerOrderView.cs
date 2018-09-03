@@ -8,19 +8,14 @@ using System.Web;
 
 namespace DeliveryService.Models
 {
-    public class CustomerOrder
+    public class FinishedCustomerOrderView
     {
         [Key]
-        public int OrderId { get; set; }
+        public int FinishedOrderId { get; set; }
 
-        public int? CustomerId { get; set; }
-        [ForeignKey("CustomerId")]
-        public virtual Customer Customer { get; set; }
-
-
-        public int? FinishOrderId { get; set; }
-        [ForeignKey("FinishOrderId")]
-        public virtual FinishOrder FinishOrder { get; set; }
+        public int? OrderId { get; set; }
+        [ForeignKey("OrderId")]
+        public virtual CustomerOrder CustomerOrder { get; set; }
 
         public string RestaurantName { get; set; }
         public string ItemOrdered { get; set; }
@@ -32,10 +27,13 @@ namespace DeliveryService.Models
         public DateTime? Date_of_Order { get; set; }
 
         public bool CurbeSide { get; set; }
-        public bool WalkIn {get; set;}
+        public bool WalkIn { get; set; }
 
         public int Tips { get; set; }
-        
+        public bool Yes { get; set; }
+
+
+
 
     }
 }

@@ -20,14 +20,14 @@
         <br /><br /><br /><br />
    <table align="center" width ="60%">
        <tr>
-           <td>To</td>
+           <td>From</td>
            <td>
                <asp:TextBox ID="to" runat="server" Text="" Width="80%"></asp:TextBox>
            </td>
        </tr>
 
         <tr>
-           <td>From</td>
+           <td>To</td>
            <td>
                <asp:TextBox ID="from" runat="server" Text="" Width="80%"></asp:TextBox>
            </td>

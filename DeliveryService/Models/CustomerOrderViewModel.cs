@@ -17,8 +17,11 @@ namespace DeliveryService.Models
         [ForeignKey("CustomerId")]
         public virtual Customer Customer { get; set; }
 
-      
-
+        public int? FinishOrderId { get; set; }
+        [ForeignKey("FinishOrderId")]
+        public virtual FinishOrder FinishOrder { get; set;}
+        
+        
 
         [Required(ErrorMessage = " First Name is required")]
         [StringLength(50)]
@@ -47,6 +50,6 @@ namespace DeliveryService.Models
 
         public int Tips { get; set; }
 
-       
+       public bool Yes { get; set;}
     }
 }

@@ -238,9 +238,9 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808300000536_initial.cs" />
-    <Compile Include="Migrations\201808300000536_initial.Designer.cs">
-      <DependentUpon>201808300000536_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201809032252266_initial1.cs" />
+    <Compile Include="Migrations\201809032252266_initial1.Designer.cs">
+      <DependentUpon>201809032252266_initial1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccetpOrder.cs" />
@@ -253,6 +253,7 @@
     <Compile Include="Models\CustomerOrderViewModel.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\Employer.cs" />
+    <Compile Include="Models\FinishedCustomerOrderView.cs" />
     <Compile Include="Models\FinishOrder.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -382,11 +383,6 @@
     <Content Include="Views\Employers\OrderEmployerViews.cshtml" />
     <Content Include="Views\Drivers\AcceptedOrder.cshtml" />
     <Content Include="Views\Drivers\FinishedOrders.cshtml" />
-    <Content Include="Views\FinishOrders\Create.cshtml" />
-    <Content Include="Views\FinishOrders\Delete.cshtml" />
-    <Content Include="Views\FinishOrders\Details.cshtml" />
-    <Content Include="Views\FinishOrders\Edit.cshtml" />
-    <Content Include="Views\FinishOrders\Index.cshtml" />
     <Content Include="Views\Employers\AcceptedOrders.cshtml" />
     <Content Include="Views\Employers\FinishedOrder.cshtml" />
     <Content Include="Views\AccetpOrders\Create.cshtml" />
@@ -395,6 +391,11 @@
     <Content Include="Views\Employers\Cost.cshtml" />
     <Content Include="Views\Employers\Transaction.cshtml" />
     <Content Include="Views\Employers\TransactionApprovedOrders.cshtml" />
+    <Content Include="Views\FinishOrders\Create.cshtml" />
+    <Content Include="Views\FinishOrders\Delete.cshtml" />
+    <Content Include="Views\FinishOrders\Details.cshtml" />
+    <Content Include="Views\FinishOrders\Edit.cshtml" />
+    <Content Include="Views\FinishOrders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -411,8 +412,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808300000536_initial.resx">
-      <DependentUpon>201808300000536_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809032252266_initial1.resx">
+      <DependentUpon>201809032252266_initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

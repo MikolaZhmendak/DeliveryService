@@ -17,8 +17,7 @@ namespace DeliveryService.Controllers
         // GET: FinishOrders
         public ActionResult Index()
         {
-            var finishOrder = db.FinishOrder.Include(f => f.Customer);
-            return View(finishOrder.ToList());
+            return View(db.FinishOrder.ToList());
         }
 
         // GET: FinishOrders/Details/5
@@ -39,7 +38,6 @@ namespace DeliveryService.Controllers
         // GET: FinishOrders/Create
         public ActionResult Create()
         {
-            ViewBag.CustomerId = new SelectList(db.Customer, "CustomerId", "FirstName");
             return View();
         }
 
@@ -48,16 +46,15 @@ namespace DeliveryService.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FinishOrderId,CustomerId,Yes")] FinishOrder finishOrder)
+        public ActionResult Create([Bind(Include = "FinishOrderId,Yes")] FinishOrder finishOrder)
         {
             if (ModelState.IsValid)
             {
                 db.FinishOrder.Add(finishOrder);
                 db.SaveChanges();
-                return RedirectToAction("DriverHome","Drivers");
+                return RedirectToAction("Index");
             }
 
-            ViewBag.CustomerId = new SelectList(db.Customer, "CustomerId", "FirstName", finishOrder.CustomerId);
             return View(finishOrder);
         }
 
@@ -73,7 +70,6 @@ namespace DeliveryService.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CustomerId = new SelectList(db.Customer, "CustomerId", "FirstName", finishOrder.CustomerId);
             return View(finishOrder);
         }
 
@@ -82,7 +78,7 @@ namespace DeliveryService.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FinishOrderId,CustomerId,Yes")] FinishOrder finishOrder)
+        public ActionResult Edit([Bind(Include = "FinishOrderId,Yes")] FinishOrder finishOrder)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +86,6 @@ namespace DeliveryService.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CustomerId = new SelectList(db.Customer, "CustomerId", "FirstName", finishOrder.CustomerId);
             return View(finishOrder);
         }
 

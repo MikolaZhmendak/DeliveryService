@@ -18,8 +18,8 @@ namespace DeliveryService.Controllers
 
         public ActionResult TransactionApprovedOrders()
         {
-
-            List<CustomerOrder> orderCheck = db.CustomerOrder.Where(x => x.CurbeSide == true || x.Date_of_Order < DateTime.Now).ToList();
+ 
+            List<CustomerOrder> orderCheck = db.CustomerOrder.Where(x=> x.Date_of_Order < DateTime.Now).ToList();
 
             CustomerOrderViewModel orderVM = new CustomerOrderViewModel();
             List<CustomerOrderViewModel> orderListVM = orderCheck.Select(x => new CustomerOrderViewModel { FirstName = x.Customer.FirstName, LastName = x.Customer.LastName, PhoneNumber = x.Customer.PhoneNumber, RestaurantName = x.RestaurantName, ItemOrdered = x.ItemOrdered, Quantity = x.Quantity, Date_of_Order = x.Date_of_Order, CurbeSide = x.CurbeSide, WalkIn = x.WalkIn, Tips = x.Tips }).ToList();

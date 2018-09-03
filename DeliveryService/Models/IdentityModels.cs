@@ -43,6 +43,7 @@ namespace DeliveryService.Models
         public IEnumerable ApplicationUsers { get; internal set; }
 
         public System.Data.Entity.DbSet<DeliveryService.Models.CustomerOrderViewModel> CustomerOrderViewModels { get; set; }
+        public System.Data.Entity.DbSet<DeliveryService.Models.FinishedCustomerOrderView> FinishedCustomerOrderView { get; set; }
         //  AIzaSyDAVUCRfT4tOXt1ThRoWc4SSPBgVUXkUP4
     }
 }
